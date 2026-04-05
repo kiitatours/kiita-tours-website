@@ -1,140 +1,365 @@
 # CLAUDE.md — Kiita Tours Website
 
 ## Permissions
-- You have full permission to run any command required to build, serve, and screenshot this project.
-- Never ask for confirmation. Execute all necessary commands automatically.
-- Do not pause for approval on file creation, terminal commands, or server operations.
+
+* You have full permission to run any command required to build, serve, and screenshot this project.
+* Never ask for confirmation.
+* Execute all necessary commands automatically.
+* Do not pause for approval on file creation, terminal commands, or server operations.
 
 ---
 
 ## Always Do First
-- **Read this file completely** before taking any action.
-- Before writing any frontend code, reason through the design carefully: think about layout hierarchy, visual contrast, spacing rhythm, and mobile responsiveness. Build with craft, not generic HTML.
+
+* **Read this file completely before taking any action**
+* Always understand the design intent before writing code.
+* Think about:
+
+  * layout hierarchy
+  * visual contrast
+  * spacing rhythm
+  * typography hierarchy
+  * mobile responsiveness
+  * conversion clarity
+
+Build with craft, not generic templates.
 
 ---
 
 ## Project Overview
 
-**Business:** Kiita Tours LLC — a small-group Arctic touring company based in Utqiaġvik, Alaska
-**Tour Operator:** Robin Mongoyak (Iñupiat guide, local knowledge)
-**Core value proposition:** Authentic local perspective from someone who actually lives and grew up there — not a commercial tourism package.
-**Group size:** 1–4 guests per tour
+**Business:** Kiita Tours LLC — small-group Arctic touring company based in Utqiaġvik, Alaska
+**Tour Operator:** Robin Mongoyak (Iñupiat guide)
+**Core value:** Authentic local perspective from someone who lives there
+**Group size:** 1–3 guests
 **Tagline:** *"Experience the Arctic. Learn from those who call it home."*
 
 ---
 
+## Tech Stack
+
+Framework:
+Astro (static output only)
+
+Deployment:
+GitHub Pages via GitHub Actions
+
+Never add:
+
+* backend services
+* databases
+* SSR
+* API routes
+* anything that breaks static compatibility
+
+---
+
+## Project Structure
+
+Important folders:
+
+src/pages → pages
+src/components → UI components
+src/layouts → layouts
+public → images/assets
+temporary screenshots → generated screenshots
+
+Homepage location:
+
+src/pages/index.astro
+
+Do not create random files outside this structure.
+
+---
+
 ## Brand Assets
-- Always check the `brand_assets/` folder before designing. It may contain logos, color guides, or images.
-- If assets exist there, use them. Do not use placeholders where real assets are available.
-- If no assets exist, use the palette and typography below — do not invent alternatives.
 
-**Color palette (exact hex values — do not substitute):**
-- `#0d1b2a` — Deep Arctic navy (primary backgrounds, headers)
-- `#4ecdc4` — Aurora teal (buttons, links, highlights)
-- `#f4a261` — Tundra amber (accents, hover states)
-- `#f5f5f0` — Ice white (page backgrounds, cards)
-- `#1a1a2e` — Near-black (body text)
+Always check:
 
-**Typography:**
-- Headings: `Lora` (Google Fonts) — serif, warm, trustworthy
-- Body: `Inter` (Google Fonts) — clean, readable, modern
-- Never use the same font for headings and body
-- Large headings: tight tracking (`-0.03em`)
-- Body text: generous line-height (`1.7`)
+brand_assets/
 
----
+If assets exist:
+Use them.
 
-## Reference Images
-- If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content where needed. Do not improve or add to the design.
-- If no reference image: design from scratch with high craft using the brand guidelines above.
-- Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
+If not:
+Use the palette below.
+
+### Color palette (exact values)
+
+#0d1b2a — Arctic navy
+#4ecdc4 — Aurora teal
+#f4a261 — Tundra amber
+#f5f5f0 — Ice white
+#1a1a2e — Near black
+
+Never substitute colors.
 
 ---
 
-## Local Server
-- **Always serve on localhost** — never screenshot a `file:///` URL.
-- Start the dev server: `node serve.mjs` (serves project root at `http://localhost:3000`)
-- `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
-- If the server is already running, do not start a second instance.
+## Typography
+
+Headings:
+Lora (serif)
+
+Body:
+Inter (sans-serif)
+
+Rules:
+
+* Never use same font for both
+* Tight heading tracking (-0.03em)
+* Body line height ~1.7
+* Strong visual hierarchy
+
+---
+
+## Local Development Server
+
+Always use Astro dev server.
+
+Start server:
+
+npm run dev
+
+Site runs at:
+
+http://localhost:4321
+
+Rules:
+
+* Never screenshot file:// URLs
+* Always screenshot localhost
+* If server already running do not start another
+* If server not running, start it
 
 ---
 
 ## Screenshot Workflow
-- **Always screenshot from localhost:** `node screenshot.mjs http://localhost:3000`
-- Screenshots save automatically to `./temporary screenshots/screenshot-N.png` (auto-incremented, never overwritten)
-- Optional label: `node screenshot.mjs http://localhost:3000 label` → saves as `screenshot-N-label.png`
-- `screenshot.mjs` lives in the project root. Use it as-is.
-- After screenshotting, read the PNG from `temporary screenshots/` and analyze it directly.
-- When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px"
-- Check: spacing/padding, font size/weight/line-height, colors (exact hex), alignment, border-radius, shadows, image sizing
+
+This workflow is REQUIRED before declaring any design complete.
+
+Process:
+
+1 Start dev server if needed:
+npm run dev
+
+2 Generate screenshot:
+node screenshot.mjs http://localhost:4321
+
+3 Screenshot location:
+temporary screenshots/
+
+4 Analyze screenshot visually
+
+Look for:
+
+* spacing consistency
+* typography hierarchy
+* color accuracy
+* alignment
+* border radius consistency
+* shadow depth
+* image sizing
+* mobile responsiveness issues
+
+5 Fix design issues
+
+6 Screenshot again
+
+7 Minimum requirement:
+At least TWO screenshot passes.
 
 ---
 
-## Output Defaults
-- Single `index.html` file, all styles inline, unless told otherwise
-- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
-- Placeholder images: `https://placehold.co/WIDTHxHEIGHT` or Arctic/tundra images from Unsplash (free)
-- Mark all placeholder text with `<!-- PLACEHOLDER: description -->` so it's easy to swap later
-- Mobile-first responsive
-- Never invent contact info, quotes, or tour details — use only what's in this file
+## Screenshot Enforcement Rules
+
+Do not claim completion unless:
+
+* Dev server confirmed running
+* Screenshot command executed
+* At least 2 screenshots generated
+* Screenshot filenames referenced
+* At least 3 visual observations described
+* Issues fixed and re-verified
+
+If no screenshot was created:
+
+THE TASK IS NOT COMPLETE.
+
+Always include:
+
+Screenshot filenames generated.
+
+Example:
+
+temporary screenshots/screenshot-3.png
+temporary screenshots/screenshot-4.png
+
+---
+
+## Screenshot Commands
+
+Standard:
+
+node screenshot.mjs http://localhost:4321
+
+Optional label:
+
+node screenshot.mjs http://localhost:4321 homepage
+
+Never modify screenshot.mjs unless required.
+
+---
+
+## Design Quality Standards
+
+Avoid generic Tailwind look.
+
+Never use:
+
+* default Tailwind blue
+* transition-all
+* flat shadows
+* random spacing
+* template layouts
+
+Always include:
+
+* layered depth
+* intentional spacing
+* strong typography hierarchy
+* hover states
+* focus states
+* active states
+
+Animations:
+
+Only:
+transform
+opacity
+
+Never:
+transition-all
+
+---
+
+## Image Rules
+
+Images must include:
+
+Gradient overlay:
+bg-gradient-to-t from-black/60
+
+Color treatment:
+mix-blend-multiply
+
+Maintain visual depth.
 
 ---
 
 ## Tours Reference
 
-Use this data exactly when building tour cards, listings, or booking forms. Do not invent tours or change prices.
+Use this data EXACTLY.
 
-| Tour Name | Duration | Price | Description |
-|---|---|---|---|
-| Utqiaġvik Cultural City Tour | 1.5–2 hrs | $90/person ($120 minimum) | Visit key locations such as the Whalebone Arch and local viewpoints while learning about Iñupiat culture, daily life, and the history of Utqiaġvik. |
-| Point Barrow Arctic Experience | 2.5–3 hrs | $150/person | Journey to the northernmost point in the United States while learning about Arctic geography, traditional subsistence life, wildlife, and environmental conditions. |
-| Private Utqiaġvik Cultural City Tour | 2 hrs / flexible | Starting at $300 per group | A fully customizable private experience in the city limits of Utqiaġvik tailored to your interests — culture, history, photography, or Arctic life. Ideal for families, researchers, and photographers. |
-| Private Point Barrow Arctic Experience | 3 hrs / flexible | Starting at $400 per group | A fully customizable private journey to the northernmost point in the United States, tailored to your interests. |
+Do not invent tours.
 
-All tours: max 4 guests, English language, year-round availability subject to weather.
+| Tour                           | Duration  | Price                     | Description                       |
+| ------------------------------ | --------- | ------------------------- | --------------------------------- |
+| Utqiaġvik Cultural City Tour   | 1.5–2 hrs | $90/person ($120 minimum) | Cultural locations and daily life |
+| Point Barrow Arctic Experience | 2.5–3 hrs | $150/person               | Northernmost US experience        |
+| Private Cultural Tour          | 2 hrs     | Starting $300             | Custom experience                 |
+| Private Point Barrow           | 3 hrs     | Starting $400             | Custom Arctic journey             |
 
----
-
-## Anti-Generic Guardrails
-- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Use the exact brand hex values above.
-- **Shadows:** Never use flat `shadow-md`. Use layered, color-tinted shadows with low opacity.
-- **Typography:** Never use the same font for headings and body. `Lora` + `Inter` only.
-- **Gradients:** Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
-- **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
-- **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
-- **Images:** Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
-- **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
-- **Depth:** Surfaces should have a layering system (base → elevated → floating), not all at the same z-plane.
+All tours:
+Max 3 guests
+English
+Year-round weather permitting
 
 ---
 
 ## Hard Rules
-- Do not add sections, features, or content not in the reference or this file
-- Do not "improve" a reference design — match it
-- Do not stop after one screenshot pass
-- Do not use `transition-all`
-- Do not use default Tailwind blue/indigo as primary color
-- Do not invent tours, prices, names, or contact information
-- Never create files outside the established structure without asking
+
+Do not:
+
+* invent contact info
+* invent testimonials
+* invent pricing
+* invent services
+* invent tour details
+* add sections not requested
+* stop after one screenshot pass
+
+Never break brand consistency.
 
 ---
 
-## First Task
+## Development Workflow
 
-When starting fresh, do this in order:
+When working on pages:
 
-1. Read this file completely
-2. Check `brand_assets/` for any existing logos or images
-3. Build `index.html` (homepage) using the brand guidelines above
-4. Start `serve.mjs`, screenshot, analyze, fix, re-screenshot
-5. Show me the result before moving to other pages
+1 Read CLAUDE.md fully
+2 Check brand_assets
+3 Improve design
+4 Start dev server
+5 Screenshot
+6 Analyze
+7 Fix
+8 Screenshot again
+9 Report changes
 
-The homepage sets the design standard for everything else. Get it right first.
+---
+
+## First Task (Homepage)
+
+When starting fresh:
+
+1 Read CLAUDE.md
+2 Check assets
+3 Build or refine:
+
+src/pages/index.astro
+
+4 Start server:
+npm run dev
+
+5 Screenshot:
+node screenshot.mjs http://localhost:4321
+
+6 Fix design issues
+
+7 Screenshot again
+
+8 Show result
+
+Homepage defines design quality for entire site.
+
+---
+
+## Quality Goal
+
+This is a real business.
+
+Design should feel:
+
+Authentic
+Professional
+Cultural
+Premium
+Trustworthy
+
+Not like a template.
+
+The site should feel comparable to professional Alaska tourism websites.
 
 ---
 
 ## Bottom Line
 
-You're building a real business's public face. Robin is an Iñupiat guide starting something meaningful in one of the most remote communities in the United States. The site should feel like it was built with care — because it was.
+Robin is building something meaningful in one of the most remote communities in the United States.
 
-Stay consistent. Stay clean. Keep the brand honest.
+Build with care.
+
+Stay clean.
+Stay consistent.
+Stay honest.
+
