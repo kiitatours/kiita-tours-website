@@ -746,6 +746,74 @@ const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
       .booking { padding: 4.5rem 0; }
       .guide-credential { right: 0.5rem; bottom: -1rem; }
     }
+
+    /* ── Aurora animation ────────────────────────── */
+    @keyframes aurora {
+      from { background-position: 50% 50%, 50% 50%; }
+      to   { background-position: 350% 50%, 350% 50%; }
+    }
+
+    .aurora-layer {
+      position: absolute;
+      inset: -10px;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+      /* Colors sampled from the whalebone arch sunset:
+         deep Arctic blue → mid blue → amber → orange-red horizon */
+      background-image:
+        repeating-linear-gradient(
+          100deg,
+          #081320 0%, #081320 7%,
+          transparent 10%, transparent 12%,
+          #081320 16%
+        ),
+        repeating-linear-gradient(
+          100deg,
+          #1a3a5c 10%,
+          #f4a261 15%,
+          #2d5a8a 20%,
+          #ea580c 25%,
+          #4a7ab5 30%,
+          #fbbf24 35%,
+          #1a3a5c 40%
+        );
+      background-size: 300%, 200%;
+      background-position: 50% 50%, 50% 50%;
+      filter: blur(10px);
+      opacity: 0.5;
+      animation: aurora 60s linear infinite;
+      will-change: background-position;
+      -webkit-mask-image: radial-gradient(ellipse at 100% 0%, black 10%, transparent 70%);
+      mask-image: radial-gradient(ellipse at 100% 0%, black 10%, transparent 70%);
+    }
+
+    .aurora-layer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          100deg,
+          #081320 0%, #081320 7%,
+          transparent 10%, transparent 12%,
+          #081320 16%
+        ),
+        repeating-linear-gradient(
+          100deg,
+          #1a3a5c 10%,
+          #f4a261 15%,
+          #2d5a8a 20%,
+          #ea580c 25%,
+          #4a7ab5 30%,
+          #fbbf24 35%,
+          #1a3a5c 40%
+        );
+      background-size: 200%, 100%;
+      background-attachment: fixed;
+      mix-blend-mode: difference;
+      animation: aurora 60s linear infinite;
+    }
   </style>
 </head>
 <body>
@@ -773,6 +841,7 @@ const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
     </div>
     <div class="hero-overlay-1" aria-hidden="true"></div>
     <div class="hero-overlay-2" aria-hidden="true"></div>
+    <div class="aurora-layer" aria-hidden="true"></div>
 
     <div class="hero-content wrap">
       <div class="hero-location label label-teal" aria-label="Location: Utqiaġvik, Alaska">
