@@ -7,6 +7,7 @@ const arcticImg    = `${base}/arctic-ocean-gravel-pits.JPG`;
 const whaleboneImg = `${base}/whalebone-arch-sunset.jpg`;
 const barrowImg    = `${base}/point-barrow.jpg`;
 const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
+const ihlcImg      = `${base}/IHLC.webp`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -604,6 +605,67 @@ const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
       line-height: 1.25;
     }
 
+    /* ── Museum featured row ─────────────────────── */
+    .museum-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-top: 0.875rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .museum-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .museum-img-wrap img {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .museum-row:hover .museum-img-wrap img { transform: scale(1.03); }
+    .museum-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,19,32,0.6) 0%, transparent 60%);
+    }
+    .museum-text {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .museum-text .exp-caption-label { margin-bottom: 0.5rem; }
+    .museum-text .exp-caption-title { font-size: 1.375rem; margin-bottom: 1rem; }
+    .museum-desc {
+      font-size: 0.9rem;
+      color: rgba(245,245,240,0.68);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+    .museum-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+      width: fit-content;
+    }
+    .museum-link:hover { opacity: 0.75; }
+    .museum-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+    @media (min-width: 700px) {
+      .museum-row { grid-template-columns: 1fr 1fr; }
+      .museum-img-wrap img { height: 100%; min-height: 22rem; }
+    }
+
     /* ── Booking ─────────────────────────────────── */
     .booking {
       background: var(--navy);
@@ -1112,6 +1174,35 @@ const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
         </div>
 
       </div>
+
+      <!-- Iñupiat Heritage Center — featured -->
+      <div class="museum-row">
+        <div class="museum-img-wrap">
+          <img src={ihlcImg} alt="The Iñupiat Heritage Center museum building in Utqiaġvik, Alaska, covered in snow" />
+          <div class="museum-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="museum-text">
+          <div class="exp-caption-label">Cultural Institution</div>
+          <div class="exp-caption-title">Iñupiat Heritage Center</div>
+          <p class="museum-desc">
+            The Iñupiat Heritage Center is Utqiaġvik's premier museum dedicated to preserving and celebrating the history, art, and traditions of the Iñupiat people. Its exhibits cover everything from traditional tools and clothing to the history of the North Slope — telling the story of a culture that has thrived in one of the harshest environments on Earth for thousands of years.
+          </p>
+          <p class="museum-desc" style="margin-bottom: 1.25rem;">
+            Robin Mongoyak once served as curator of the Heritage Center, giving him an intimate, firsthand knowledge of every artifact and exhibit on display. A visit with Robin isn't just a tour — it's a guided conversation with someone who helped shape what you're looking at.
+          </p>
+          <a
+            href="https://share.google/7MUnUHRcQ2Yn4e34w"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="museum-link"
+            aria-label="Learn more about the Iñupiat Heritage Center on Google"
+          >
+            Learn more about the Heritage Center
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
