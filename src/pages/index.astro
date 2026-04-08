@@ -14,13 +14,113 @@ const ihlcImg      = `${base}/IHLC.webp`;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href={`${base}/kiita-tours-favicon.png`} />
-  <title>Kiita Tours — Experience the Arctic. Learn from those who call it home.</title>
-  <meta name="description" content="Small-group Arctic tours in Utqiaġvik, Alaska — the northernmost city in the United States. Led by Robin Mongoyak, a lifelong Iñupiat local guide. 1–3 guests." />
-  <meta property="og:title" content="Kiita Tours — Experience the Arctic" />
-  <meta property="og:description" content="Authentic small-group Arctic tours led by Robin Mongoyak, an Iñupiat guide born and raised in Utqiaġvik, Alaska." />
-  <meta property="og:image" content="https://kiitatours.com/whalebone-arch-sunset.jpg" />
-  <meta property="og:type" content="website" />
+
+  <!-- Primary SEO -->
+  <title>Kiita Tours | Arctic Tours in Utqiaġvik (Barrow), Alaska — Iñupiat Local Guide</title>
+  <meta name="description" content="Small-group Arctic tours in Utqiaġvik (Barrow), Alaska led by Robin Mongoyak, a lifelong Iñupiat guide. Visit Point Barrow, the Whalebone Arch, and the Iñupiat Heritage Center. 1–3 guests. Book your Arctic cultural experience today." />
+  <link rel="canonical" href="https://kiitatours.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Kiita Tours" />
+  <meta property="og:url"         content="https://kiitatours.com/" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:title"       content="Kiita Tours | Arctic Tours in Utqiaġvik (Barrow), Alaska" />
+  <meta property="og:description" content="Authentic small-group Arctic tours led by Robin Mongoyak, a lifelong Iñupiat guide born and raised in Utqiaġvik, Alaska. Visit Point Barrow, the Whalebone Arch, and learn about Iñupiat culture firsthand." />
+  <meta property="og:image"       content="https://kiitatours.com/whalebone-arch-sunset.jpg" />
+  <meta property="og:image:alt"   content="Whalebone Arch at sunset in Utqiaġvik, Alaska — a cultural landmark on Kiita Tours" />
+  <meta property="og:image:width"  content="2048" />
+  <meta property="og:image:height" content="1530" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Kiita Tours | Arctic Tours in Utqiaġvik (Barrow), Alaska" />
+  <meta name="twitter:description" content="Small-group Arctic cultural tours led by Robin Mongoyak, an Iñupiat guide in Utqiaġvik, Alaska. Visit Point Barrow and experience the Far North." />
+  <meta name="twitter:image"       content="https://kiitatours.com/whalebone-arch-sunset.jpg" />
+  <meta name="twitter:image:alt"   content="Whalebone Arch at sunset in Utqiaġvik, Alaska" />
+
+  <!-- JSON-LD Structured Data: Local Tour Operator -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristInformationCenter",
+    "name": "Kiita Tours LLC",
+    "description": "Small-group Arctic cultural tours in Utqiaġvik (Barrow), Alaska, led by Robin Mongoyak, a lifelong Iñupiat guide. Tours include the Utqiaġvik Cultural City Tour, Point Barrow Arctic Experience, and private group options.",
+    "url": "https://kiitatours.com",
+    "image": "https://kiitatours.com/whalebone-arch-sunset.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Utqiaġvik",
+      "addressRegion": "AK",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Utqiaġvik (Barrow), Alaska"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Arctic Tours",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Utqiaġvik Cultural City Tour",
+            "description": "Visit key locations including the Whalebone Arch and local viewpoints while learning about Iñupiat culture, daily life, and the history of Utqiaġvik.",
+            "touristType": "Cultural tourists"
+          },
+          "price": "90",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Point Barrow Arctic Experience",
+            "description": "Journey to the northernmost point in the United States while learning about Arctic geography, traditional subsistence life, wildlife, and environmental conditions.",
+            "touristType": "Adventure tourists"
+          },
+          "price": "150",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Private Utqiaġvik Cultural City Tour",
+            "description": "A fully customizable private experience tailored to your interests — culture, history, photography, or Arctic life.",
+            "touristType": "Cultural tourists"
+          },
+          "price": "300",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Private Point Barrow Arctic Experience",
+            "description": "A fully customizable private journey to the northernmost point in the United States.",
+            "touristType": "Adventure tourists"
+          },
+          "price": "400",
+          "priceCurrency": "USD"
+        }
+      ]
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Robin Mongoyak",
+      "jobTitle": "Iñupiat Tour Guide",
+      "knowsAbout": ["Iñupiat culture", "Arctic wildlife", "Utqiaġvik history", "subsistence living", "Point Barrow"]
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -899,7 +999,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
   <!-- ══════════════════════ HERO ══════════════════════ -->
   <section class="hero grain" aria-label="Hero">
     <div class="hero-media" aria-hidden="true">
-      <img src={heroImg} alt="" fetchpriority="high" />
+      <img src={heroImg} alt="Whalebone Arch at sunset in Utqiaġvik, Alaska — the cultural heart of Kiita Tours' Arctic experience" fetchpriority="high" />
     </div>
     <div class="hero-overlay-1" aria-hidden="true"></div>
     <div class="hero-overlay-2" aria-hidden="true"></div>
@@ -1138,7 +1238,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
       <div class="exp-grid">
 
         <div class="exp-item">
-          <img src={arcticImg} alt="Arctic Ocean with sea ice floes stretching to the horizon" class="exp-img" />
+          <img src={arcticImg} alt="Sea ice floes floating on the Arctic Ocean near Point Barrow, Utqiaġvik, Alaska" class="exp-img" />
           <div class="exp-overlay" aria-hidden="true"></div>
           <div class="exp-caption">
             <div class="exp-caption-label">Point Barrow</div>
@@ -1147,7 +1247,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
         </div>
 
         <div class="exp-item">
-          <img src={whaleboneImg} alt="Historic Whalebone Arch silhouetted against an Arctic sunset in Utqiaġvik" class="exp-img" />
+          <img src={whaleboneImg} alt="Historic Whalebone Arch silhouetted against a vivid Arctic sunset in Utqiaġvik, Alaska — a stop on the Kiita Tours cultural city tour" class="exp-img" />
           <div class="exp-overlay" aria-hidden="true"></div>
           <div class="exp-caption">
             <div class="exp-caption-label">Cultural Landmark</div>
@@ -1156,7 +1256,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
         </div>
 
         <div class="exp-item">
-          <img src={barrowImg} alt="Silhouettes of visitors at the northernmost point of the United States at sunset" class="exp-img" />
+          <img src={barrowImg} alt="Visitors standing at Point Barrow — the northernmost point in the United States — at sunset near Utqiaġvik, Alaska" class="exp-img" />
           <div class="exp-overlay" aria-hidden="true"></div>
           <div class="exp-caption">
             <div class="exp-caption-label">Northernmost Point, USA</div>
@@ -1165,7 +1265,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
         </div>
 
         <div class="exp-item">
-          <img src={nalukataqImg} alt="Aerial view of a community gathering along the Arctic coastline of Utqiaġvik" class="exp-img" />
+          <img src={nalukataqImg} alt="Aerial view of the Nalukataq community gathering on the Arctic coastline of Utqiaġvik, Alaska — an Iñupiat cultural tradition" class="exp-img" />
           <div class="exp-overlay" aria-hidden="true"></div>
           <div class="exp-caption">
             <div class="exp-caption-label">Iñupiat Tradition</div>
