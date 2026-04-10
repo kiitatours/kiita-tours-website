@@ -324,22 +324,23 @@ const ihlcImg      = `${base}/IHLC.webp`;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 55%;
-      opacity: 0.65;
+      object-position: center 38%;
+      opacity: 0.9;
     }
     .hero-overlay-1 {
       position: absolute;
       inset: 0;
       background: linear-gradient(to top,
-        var(--navy) 18%,
-        rgba(13,27,42,0.72) 50%,
-        rgba(13,27,42,0.18) 100%
+        rgba(13,27,42,0.97) 0%,
+        rgba(13,27,42,0.82) 22%,
+        rgba(13,27,42,0.22) 52%,
+        rgba(13,27,42,0.04) 100%
       );
     }
     .hero-overlay-2 {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 55% 40%, rgba(78,205,196,0.07) 0%, transparent 55%);
+      background: radial-gradient(ellipse at 55% 40%, rgba(78,205,196,0.05) 0%, transparent 55%);
     }
     .hero-content {
       position: relative;
@@ -383,6 +384,36 @@ const ihlcImg      = `${base}/IHLC.webp`;
       flex-wrap: wrap;
       gap: 1rem;
       align-items: center;
+    }
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(78,205,196,0.5); }
+      60%       { box-shadow: 0 0 0 12px rgba(78,205,196,0); }
+    }
+    .btn-cta-primary {
+      animation: cta-pulse 2.8s ease-out infinite;
+      font-size: 1.0625rem;
+      padding: 1.125rem 2.25rem;
+    }
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: rgba(245,245,240,0.5);
+      font-weight: 400;
+    }
+    .hero-trust-item svg { color: var(--teal); flex-shrink: 0; }
+    .hero-trust-divider {
+      width: 1px;
+      height: 0.75rem;
+      background: rgba(245,245,240,0.2);
     }
     .hero-scroll {
       position: absolute;
@@ -1025,8 +1056,35 @@ const ihlcImg      = `${base}/IHLC.webp`;
       </p>
 
       <div class="hero-actions">
-        <a href="#tours" class="btn btn-teal">View Tours</a>
-        <a href="#guide" class="btn btn-ghost-light">Learn About Our Culture</a>
+        <a href="#tours" class="btn btn-teal btn-cta-primary">
+          View Tours
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-ghost-light"
+        >
+          Book a Tour
+        </a>
+      </div>
+
+      <div class="hero-trust" aria-label="Quick facts">
+        <span class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          From $90/person
+        </span>
+        <span class="hero-trust-divider" aria-hidden="true"></span>
+        <span class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Max 3 guests
+        </span>
+        <span class="hero-trust-divider" aria-hidden="true"></span>
+        <span class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Year-round
+        </span>
       </div>
     </div>
 
