@@ -8,6 +8,7 @@ const whaleboneImg = `${base}/whalebone-arch-sunset.jpg`;
 const barrowImg    = `${base}/point-barrow.jpg`;
 const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
 const ihlcImg      = `${base}/IHLC.webp`;
+const mapImg       = `${base}/alaska-point-barrow-map.png`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -1009,6 +1010,270 @@ const ihlcImg      = `${base}/IHLC.webp`;
       mix-blend-mode: difference;
       animation: aurora 60s linear infinite;
     }
+
+    /* ── Practical info strip ────────────────────── */
+    .practical-strip {
+      margin-top: 2.5rem;
+      background: #fff;
+      border-radius: 1.25rem;
+      padding: 2rem 2rem 1.75rem;
+      box-shadow: 0 2px 12px rgba(13,27,42,0.06), 0 1px 3px rgba(13,27,42,0.04);
+    }
+    .practical-strip-label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+    }
+    .practical-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .practical-col h4 {
+      font-family: var(--r-serif);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .practical-col p {
+      font-size: 0.8375rem;
+      color: rgba(26,26,46,0.65);
+      line-height: 1.7;
+    }
+    .practical-col ul {
+      font-size: 0.8375rem;
+      color: rgba(26,26,46,0.65);
+      line-height: 1.7;
+      padding-left: 1.125rem;
+      margin-top: 0.25rem;
+    }
+    .practical-col ul li { margin-bottom: 0.2rem; }
+    .season-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .season-item {
+      background: rgba(78,205,196,0.07);
+      border-radius: 0.625rem;
+      padding: 0.625rem 0.75rem;
+    }
+    .season-name {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      margin-bottom: 0.2rem;
+    }
+    .season-temp {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .season-note {
+      font-size: 0.7rem;
+      color: rgba(26,26,46,0.45);
+      margin-top: 0.15rem;
+    }
+    @media (min-width: 700px) {
+      .practical-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      .practical-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    /* ── Section CTA row ─────────────────────────── */
+    .section-cta-row {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 1.375rem 1.75rem;
+      border-radius: 1rem;
+    }
+    .section-cta-row.on-light {
+      background: rgba(78,205,196,0.07);
+      border: 1px solid rgba(78,205,196,0.16);
+    }
+    .section-cta-row.on-dark {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .section-cta-row p {
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .section-cta-row.on-light p { color: rgba(26,26,46,0.7); }
+    .section-cta-row.on-dark  p { color: rgba(245,245,240,0.6); }
+    .section-cta-row.on-light strong { color: var(--navy); }
+    .section-cta-row.on-dark  strong { color: var(--ice); }
+
+    /* ── Tour urgency + private featured ─────────── */
+    .tour-urgency {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: #c4712a;
+      background: rgba(244,162,97,0.12);
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .tour-urgency-dot {
+      width: 5px;
+      height: 5px;
+      background: #f4a261;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+    .tour-card.tour-featured {
+      border: 1.5px solid rgba(244,162,97,0.3);
+      box-shadow:
+        0 4px 24px rgba(0,0,0,0.2),
+        0 1px 4px rgba(0,0,0,0.12),
+        inset 0 0 0 1px rgba(244,162,97,0.08);
+    }
+    .private-note {
+      font-size: 0.8rem;
+      color: rgba(26,26,46,0.52);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* ── Reviews placeholder section ─────────────── */
+    .reviews {
+      background: var(--ice);
+      padding: 5.5rem 0;
+    }
+    .reviews-header {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .reviews-header .label { margin-bottom: 0.75rem; }
+    .reviews-card {
+      background: #fff;
+      border-radius: 1.375rem;
+      padding: 2.75rem 2rem;
+      max-width: 42rem;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(13,27,42,0.07), 0 1px 4px rgba(13,27,42,0.04);
+    }
+    .reviews-stars {
+      display: flex;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-bottom: 1.125rem;
+    }
+    .reviews-stars svg { color: #f4a261; }
+    .reviews-card h3 {
+      font-family: var(--r-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .reviews-card p {
+      font-size: 0.9375rem;
+      color: rgba(26,26,46,0.6);
+      line-height: 1.72;
+      max-width: 34ch;
+      margin: 0 auto 1.875rem;
+    }
+    .btn-reviews {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fff;
+      border: 1.5px solid rgba(13,27,42,0.14);
+      color: var(--ink);
+      font-family: var(--r-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.8125rem 1.625rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease;
+    }
+    .btn-reviews:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(13,27,42,0.12);
+    }
+
+    /* ── Map panel ───────────────────────────────── */
+    .map-panel {
+      margin-top: 0.875rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .map-panel-img {
+      position: relative;
+      overflow: hidden;
+      background: #0a1e32;
+    }
+    .map-panel-img img {
+      width: 100%;
+      height: 22rem;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      padding: 1.5rem;
+    }
+    .map-panel-text {
+      padding: 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .map-panel-text .exp-caption-label { margin-bottom: 0.5rem; }
+    .map-panel-text .exp-caption-title { font-size: 1.25rem; margin-bottom: 0.875rem; }
+    .map-panel-text p {
+      font-size: 0.875rem;
+      color: rgba(245,245,240,0.65);
+      line-height: 1.78;
+    }
+    @media (min-width: 700px) {
+      .map-panel { grid-template-columns: 1fr 1fr; }
+      .map-panel-img img { height: 100%; min-height: 20rem; }
+    }
+
+    /* ── Guide CTA link ──────────────────────────── */
+    .guide-facebook-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.75rem;
+      color: rgba(26,26,46,0.55);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .guide-facebook-link:hover { color: var(--navy); }
   </style>
 </head>
 <body>
@@ -1045,8 +1310,8 @@ const ihlcImg      = `${base}/IHLC.webp`;
       </div>
 
       <h1 class="display hero-headline">
-        Experience<br />the Arctic.<br />
-        <em>Learn from those<br />who call it home.</em>
+        Stand at the<br />Top of America.<br />
+        <em>Experience the Arctic<br />with those who live it.</em>
       </h1>
 
       <p class="hero-sub">
@@ -1105,7 +1370,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
           </div>
           <h3 class="trust-title">Local Iñupiat Guide</h3>
-          <p class="trust-desc">Robin Mongoyak was born and raised in Utqiaġvik. His knowledge of this land comes from a lifetime of living it — not a guidebook.</p>
+          <p class="trust-desc">Robin Mongoyak was born and raised in Utqiaġvik. A former curator of the Iñupiat Heritage Center, his knowledge of this land comes from a lifetime of living it — not a guidebook.</p>
         </div>
 
         <div class="trust-card">
@@ -1113,15 +1378,15 @@ const ihlcImg      = `${base}/IHLC.webp`;
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
           <h3 class="trust-title">Small Groups Only</h3>
-          <p class="trust-desc">Maximum 3 guests per tour. Every experience stays personal, unhurried, and built around you — not a crowd.</p>
+          <p class="trust-desc">Maximum 3 guests per tour. No buses, no crowds — just you and Robin. Every tour stays personal, unhurried, and built entirely around your experience. Spots fill quickly; reserve before you arrive.</p>
         </div>
 
         <div class="trust-card">
           <div class="trust-icon" aria-hidden="true">
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
           </div>
-          <h3 class="trust-title">Year-Round Access</h3>
-          <p class="trust-desc">Polar nights, midnight sun, migratory seasons, frozen ocean — every season of the Arctic has something extraordinary to show you.</p>
+          <h3 class="trust-title">Every Season, Something New</h3>
+          <p class="trust-desc">Polar darkness, the midnight sun, ice breakup, whale migration — each season of the Arctic reveals something the previous one doesn't. Robin will help you understand exactly what makes the timing of your visit special.</p>
         </div>
 
         <div class="trust-card">
@@ -1129,10 +1394,68 @@ const ihlcImg      = `${base}/IHLC.webp`;
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
           </div>
           <h3 class="trust-title">Real Arctic Life</h3>
-          <p class="trust-desc">Learn about subsistence hunting, traditional culture, and Arctic survival from someone who lives it daily — not a curated performance.</p>
+          <p class="trust-desc">Subsistence hunting, traditional culture, Arctic survival — learned from someone who practices it. This isn't a curated performance. It's a conversation with a person who has lived this life from birth.</p>
         </div>
 
       </div>
+
+      <!-- Practical Information Strip -->
+      <div class="practical-strip">
+        <p class="practical-strip-label">Practical Information — Know Before You Go</p>
+        <div class="practical-grid">
+
+          <div class="practical-col">
+            <h4>Seasonal Temperatures</h4>
+            <div class="season-grid">
+              <div class="season-item">
+                <div class="season-name">Summer</div>
+                <div class="season-temp">34–50°F<br/><span style="font-weight:400;font-size:0.75rem;">1–10°C</span></div>
+                <div class="season-note">Midnight sun · Jun–Aug</div>
+              </div>
+              <div class="season-item">
+                <div class="season-name">Fall</div>
+                <div class="season-temp">15–38°F<br/><span style="font-weight:400;font-size:0.75rem;">-9–3°C</span></div>
+                <div class="season-note">Freeze-up begins · Sep–Oct</div>
+              </div>
+              <div class="season-item">
+                <div class="season-name">Winter</div>
+                <div class="season-temp">-30–5°F<br/><span style="font-weight:400;font-size:0.75rem;">-34–-15°C</span></div>
+                <div class="season-note">Polar night · Nov–Mar</div>
+              </div>
+              <div class="season-item">
+                <div class="season-name">Spring</div>
+                <div class="season-temp">-10–30°F<br/><span style="font-weight:400;font-size:0.75rem;">-23–-1°C</span></div>
+                <div class="season-note">Ice thaws · Apr–May</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="practical-col">
+            <h4>What to Pack</h4>
+            <ul>
+              <li>Base layer + insulating mid-layer</li>
+              <li>Windproof, waterproof outer shell</li>
+              <li>Insulated, waterproof boots</li>
+              <li>Warm hat, gloves, and neck gaiter</li>
+              <li>In winter: extreme cold-weather gear (temps can reach -40°F)</li>
+              <li>Camera — the light here is unlike anywhere else</li>
+            </ul>
+          </div>
+
+          <div class="practical-col">
+            <h4>What to Expect</h4>
+            <p>Tours depart from Utqiaġvik and are conducted in English. Robin picks you up and handles everything — routes, commentary, and your safety. Tours typically run 1.5–3 hours depending on type. Robin will confirm timing and conditions once you book. All tours are subject to weather — safety comes first.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section CTA -->
+      <div class="section-cta-row on-light">
+        <p><strong>Ready to experience the Arctic?</strong> Browse our tour options and reserve your spot before you arrive.</p>
+        <a href="#tours" class="btn btn-dark" style="white-space:nowrap;">View Tours</a>
+      </div>
+
     </div>
   </section>
 
@@ -1144,6 +1467,10 @@ const ihlcImg      = `${base}/IHLC.webp`;
         <p class="label label-teal">Choose Your Experience</p>
         <h2 class="h2" id="tours-heading">Arctic Tours</h2>
         <p>All tours depart from Utqiaġvik and are conducted in English. Max 3 guests. Available year-round, subject to weather.</p>
+        <p style="margin-top: 0.75rem; font-size: 0.8375rem; color: rgba(245,245,240,0.45);">
+          <span style="color: var(--amber); font-weight: 600;">Small groups fill quickly.</span>
+          &nbsp;Reserve before you arrive in Utqiaġvik — tours cannot always be accommodated same-day.
+        </p>
       </div>
       <div class="tours-grid">
 
@@ -1190,7 +1517,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
         </article>
 
         <!-- Tour 3 -->
-        <article class="tour-card">
+        <article class="tour-card tour-featured">
           <div class="tour-card-accent accent-amber" aria-hidden="true"></div>
           <span class="tour-tag tag-private">Private Tour</span>
           <h3 class="tour-name">Private Utqiaġvik Cultural City Tour</h3>
@@ -1205,13 +1532,14 @@ const ihlcImg      = `${base}/IHLC.webp`;
             </div>
           </div>
           <p class="tour-desc">A fully customizable private experience tailored to your interests — culture, history, photography, or Arctic life. Ideal for families, researchers, and photographers.</p>
+          <p class="private-note">You set the agenda. Robin guides the experience. No fixed itinerary — this tour is entirely yours.</p>
           <div class="tour-footer">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-dark-sm">Book This Tour</a>
           </div>
         </article>
 
         <!-- Tour 4 -->
-        <article class="tour-card">
+        <article class="tour-card tour-featured">
           <div class="tour-card-accent accent-amber" aria-hidden="true"></div>
           <span class="tour-tag tag-private">Private Tour</span>
           <h3 class="tour-name">Private Point Barrow Arctic Experience</h3>
@@ -1226,12 +1554,20 @@ const ihlcImg      = `${base}/IHLC.webp`;
             </div>
           </div>
           <p class="tour-desc">A fully customizable private journey to the northernmost point in the United States, tailored entirely to your interests and pace.</p>
+          <p class="private-note">Stand where the Arctic Ocean, Beaufort Sea, and Chukchi Sea meet — on your own schedule, with your own private guide.</p>
           <div class="tour-footer">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-dark-sm">Book This Tour</a>
           </div>
         </article>
 
       </div>
+
+      <!-- Section CTA after tours -->
+      <div class="section-cta-row on-dark">
+        <p><strong>Not sure which tour is right for you?</strong> Reach out and Robin will help you choose based on your schedule and interests.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-teal" style="white-space:nowrap;font-size:0.875rem;padding:0.8125rem 1.5rem;">Reserve a Spot</a>
+      </div>
+
     </div>
   </section>
 
@@ -1255,35 +1591,82 @@ const ihlcImg      = `${base}/IHLC.webp`;
           <h2 class="guide-name" id="guide-heading">Robin Mongoyak</h2>
 
           <div class="guide-bio">
-            <p>Robin Mongoyak is a lifelong resident of Utqiaġvik, Alaska, and an experienced local guide with deep roots in Iñupiaq culture and Arctic life. Having grown up on the tundra, he learned from an early age about the land, wildlife, and traditions that have sustained his people for generations.</p>
+            <p>Robin Mongoyak is a lifelong resident of Utqiaġvik, Alaska — born and raised in one of the most remote communities in the world. He spent his childhood learning from the land itself: the wildlife, the ice, the seasons, and the Iñupiaq traditions that have sustained his people for thousands of years.</p>
 
             <div class="guide-pull">
-              <p>"Through years of experience guiding visitors and studying Arctic wildlife, including migratory birds, Robin developed a passion for sharing the unique history, culture, and environment of Alaska's North Slope."</p>
+              <p>"There are things about this place you can only know if you've lived here. That's what I want to share — not what's in a book, but what it actually feels like to call the Arctic home."</p>
             </div>
 
-            <p>His tours offer more than sightseeing — they offer an authentic local perspective on life in one of the most remote communities in the world. As a father of five and a respected community member, Robin takes pride in helping visitors feel welcome while teaching them about Iñupiaq traditions, subsistence living, Arctic survival, and the changing seasons of the Far North.</p>
+            <p>A former curator of the Iñupiat Heritage Center, Robin brings a rare depth of cultural and historical knowledge to every tour. He has spent years studying Arctic wildlife — including migratory birds and marine mammals — and guiding visitors who come to Utqiaġvik seeking something beyond the ordinary. As a father of five and a respected community member, his hospitality is genuine and his knowledge is firsthand.</p>
 
-            <p>Robin's goal is simple: to help every guest leave Utqiaġvik with a deeper understanding of the culture, the land, and the people who call this remarkable place home.</p>
+            <p>When you tour with Robin, you're not following a script. You're spending time with someone who has hunted on the sea ice, watched the aurora from his own backyard, and mourned and celebrated alongside this community for decades. That perspective cannot be hired from a travel agency.</p>
 
-            <p>If you'd like a glimpse of life in Barrow before your visit — or simply want to follow along — Robin regularly shares stories, photos, and updates about Iñupiat culture and daily Arctic life on his Facebook page. It's a great way to get to know your guide before you arrive.</p>
+            <p>Follow Robin on Facebook for a look at life in Barrow before your visit — he regularly shares photos, stories, and updates about Iñupiat culture and what's happening in the community.</p>
           </div>
 
-          <a
-            href="https://www.facebook.com/robinhmongoyak"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.75rem; color: rgba(26,26,46,0.55); font-size: 0.875rem; font-weight: 500; transition: color 0.2s ease;"
-            onmouseover="this.style.color='#0d1b2a'"
-            onmouseout="this.style.color='rgba(26,26,46,0.55)'"
-            aria-label="Robin Mongoyak on Facebook"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-            </svg>
-            facebook.com/robinhmongoyak
-          </a>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1.75rem;">
+            <a
+              href="https://www.facebook.com/robinhmongoyak"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="guide-facebook-link"
+              aria-label="Robin Mongoyak on Facebook"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+              </svg>
+              facebook.com/robinhmongoyak
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-dark-sm"
+            >
+              Tour with Robin
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ REVIEWS ══════════════════════ -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <div class="reviews-header">
+        <p class="label label-teal">Guest Experiences</p>
+        <h2 class="h2" id="reviews-heading" style="color: var(--navy); margin-top: 0.625rem;">Our Guests Speak<br />for Themselves</h2>
+      </div>
+
+      <div class="reviews-card">
+        <div class="reviews-stars" aria-label="5-star rated on Google">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Read What Guests Are Saying</h3>
+        <p>Guests share their experiences on Google after touring with Robin. Their words capture something this page cannot — read them before you decide.</p>
+        <a
+          href="https://share.google/VSpZBP2TeFRreux2N"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-reviews"
+          aria-label="Read Kiita Tours reviews on Google"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0;">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Read Guest Reviews on Google
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -1335,6 +1718,18 @@ const ihlcImg      = `${base}/IHLC.webp`;
 
       </div>
 
+      <!-- Alaska Map — geographic context -->
+      <div class="map-panel">
+        <div class="map-panel-img">
+          <img src={mapImg} alt="Map of Alaska highlighting Point Barrow at the northernmost tip of the United States, surrounded by the Arctic Ocean, Beaufort Sea, and Chukchi Sea" />
+        </div>
+        <div class="map-panel-text">
+          <div class="exp-caption-label">Where You're Going</div>
+          <div class="exp-caption-title">The Northernmost Point in the United States</div>
+          <p>Point Barrow sits at the very top of Alaska — where the Arctic Ocean, the Beaufort Sea, and the Chukchi Sea all converge. There is no road to get here. Utqiaġvik is accessible only by air, and Point Barrow itself can only be reached on tour with a local guide. Most people will never stand where you're about to stand.</p>
+        </div>
+      </div>
+
       <!-- Iñupiat Heritage Center — featured -->
       <div class="museum-row">
         <div class="museum-img-wrap">
@@ -1367,26 +1762,41 @@ const ihlcImg      = `${base}/IHLC.webp`;
   </section>
 
   <!-- ══════════════════════ BOOKING ══════════════════════ -->
-  <div class="booking-contact">
-  <p class="booking-contact-label">To book a tour, contact Robin directly:</p>
+  <section class="booking" id="booking" aria-labelledby="booking-heading">
+    <div class="booking-glow" aria-hidden="true"></div>
+    <div class="wrap booking-inner">
+      <p class="label label-teal">Reserve Your Spot</p>
+      <h2 class="h2 booking-headline" id="booking-heading">Ready to Experience<br />the Arctic?</h2>
+      <hr class="booking-rule" />
+      <p class="booking-sub">Tours fill quickly — especially in peak season. Reserve before you arrive in Utqiaġvik so Robin can confirm your date, answer any questions, and make sure everything is ready for you.</p>
 
-  <p class="booking-contact-value">
-    <a 
-      href="mailto:kiitatours@gmail.com?subject=Kiita%20Tours%20Booking%20Inquiry"
-      class="inline-block mt-2 px-6 py-3 bg-[#4ecdc4] text-[#0d1b2a] rounded-lg font-medium hover:opacity-90 transition"
-    >
-      Email Robin to Book
-    </a>
-  </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-teal btn-cta-primary"
+        >
+          Book a Tour
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a
+          href="mailto:kiitatours@gmail.com?subject=Kiita%20Tours%20Booking%20Inquiry"
+          class="btn btn-ghost-light"
+        >
+          Email Robin Directly
+        </a>
+      </div>
 
-  <p class="text-sm opacity-70 mt-2">
-    kiitatours@gmail.com
-  </p>
-
-  <p class="booking-contact-note">
-    We'll confirm your tour, answer your questions, and send everything you need before arrival.
-  </p>
-</div>
+      <div class="booking-contact">
+        <div>
+          <p class="booking-contact-label">Email</p>
+          <p class="booking-contact-value">kiitatours@gmail.com</p>
+          <p class="booking-contact-note">Robin will confirm your tour, answer your questions, and send everything you need to prepare before arrival.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ══════════════════════ FOOTER ══════════════════════ -->
   <footer class="footer" role="contentinfo">
@@ -1399,7 +1809,7 @@ const ihlcImg      = `${base}/IHLC.webp`;
         <a href="#tours"      class="footer-link">Tours</a>
         <a href="#guide"      class="footer-link">About</a>
         <a href="#experience" class="footer-link">Experience</a>
-        <a href="#book"       class="footer-link">Book</a>
+        <a href="#booking"    class="footer-link">Book</a>
       </nav>
       <p class="footer-copy">Utqiaġvik, Alaska &nbsp;·&nbsp; &copy; 2025 Kiita Tours LLC</p>
     </div>
