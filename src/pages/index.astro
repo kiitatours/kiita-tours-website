@@ -13,6 +13,15 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QTYJY5B07"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2QTYJY5B07');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -1289,7 +1298,7 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
         <a href="#tours"      class="nav-link">Tours</a>
         <a href="#guide"      class="nav-link">About</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-teal" style="font-size:0.8125rem;padding:0.625rem 1.25rem;">Book a Tour</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-teal" style="font-size:0.8125rem;padding:0.625rem 1.25rem;" onclick="gtag('event', 'book_click', {source: 'nav'})">Book a Tour</a>
       </nav>
     </div>
   </header>
@@ -1330,6 +1339,7 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-ghost-light"
+          onclick="gtag('event', 'book_click', {source: 'hero'})"
         >
           Book a Tour
         </a>
@@ -1776,6 +1786,7 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-teal btn-cta-primary"
+          onclick="gtag('event', 'book_click', {source: 'booking_section'})"
         >
           Book a Tour
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
