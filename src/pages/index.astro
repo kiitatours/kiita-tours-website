@@ -1271,6 +1271,51 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
       .map-panel-img img { height: 100%; min-height: 20rem; }
     }
 
+    /* ── Live webcam badge ───────────────────────── */
+    .webcam-badge {
+      position: absolute;
+      top: 0.875rem;
+      right: 0.875rem;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(8, 19, 32, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(78, 205, 196, 0.3);
+      border-radius: 9999px;
+      padding: 0.35rem 0.75rem 0.35rem 0.55rem;
+      font-family: var(--r-sans);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: rgba(245, 245, 240, 0.9);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .webcam-badge:hover {
+      background: rgba(78, 205, 196, 0.18);
+      border-color: rgba(78, 205, 196, 0.6);
+    }
+    .webcam-badge:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 3px;
+    }
+    .webcam-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ecdc4;
+      flex-shrink: 0;
+      animation: live-pulse 2s ease-in-out infinite;
+    }
+    @keyframes live-pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(78, 205, 196, 0.5); }
+      50%       { opacity: 0.7; box-shadow: 0 0 0 4px rgba(78, 205, 196, 0); }
+    }
+
     /* ── Guide CTA link ──────────────────────────── */
     .guide-facebook-link {
       display: inline-flex;
@@ -1693,6 +1738,16 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
         <div class="exp-item">
           <img src={arcticImg} alt="Sea ice floes floating on the Arctic Ocean near Point Barrow, Utqiaġvik, Alaska" class="exp-img" />
           <div class="exp-overlay" aria-hidden="true"></div>
+          <a
+            href="https://seaice.alaska.edu/wp-content/uploads/2024/04/Utq_seaicecam_current-scaled.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="webcam-badge"
+            aria-label="View live Arctic Ocean webcam — sea ice camera at Utqiaġvik"
+          >
+            <span class="webcam-dot" aria-hidden="true"></span>
+            Live Sea Ice Cam
+          </a>
           <div class="exp-caption">
             <div class="exp-caption-label">Point Barrow</div>
             <div class="exp-caption-title">The Arctic Ocean</div>
