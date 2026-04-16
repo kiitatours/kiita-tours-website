@@ -1,0 +1,1316 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const logo            = `${base}/Kiita-Tours-Logo.png`;
+const arcticImg       = `${base}/arctic-ocean-gravel-pits.JPG`;
+const gearShirt       = `${base}/insulated-shirt.jpg`;
+const gearSweater     = `${base}/sweater.jpg`;
+const gearNFJacket    = `${base}/northface-winter-jacket.jpg`;
+const gearLeviJacket  = `${base}/Levi-winter-jacket.jpg`;
+const gearBoots       = `${base}/winter-boots.jpg`;
+const gearLinerGloves = `${base}/liner-gloves.jpg`;
+const gearMittens     = `${base}/mittens-winter.jpg`;
+const gearSocks       = `${base}/wool-socks.jpg`;
+const gearFacemask    = `${base}/facemask.jpg`;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QTYJY5B07"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2QTYJY5B07');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon"             type="image/png" href={`${base}/Kiita-Tours-Logo.png`} />
+  <link rel="shortcut icon"    type="image/png" href={`${base}/Kiita-Tours-Logo.png`} />
+  <link rel="apple-touch-icon"                  href={`${base}/Kiita-Tours-Logo.png`} />
+
+  <title>Safety &amp; Preparation | Kiita Tours — Arctic Tours in Utqiaġvik, Alaska</title>
+  <meta name="description" content="Everything you need to know before your Arctic tour with Kiita Tours. Gear guidance, seasonal temperatures, what to expect, and how Robin Mongoyak approaches guest safety in Utqiaġvik, Alaska." />
+  <link rel="canonical" href="https://kiitatours.com/safety-preparation" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Kiita Tours" />
+  <meta property="og:url"         content="https://kiitatours.com/safety-preparation" />
+  <meta property="og:title"       content="Safety &amp; Preparation | Kiita Tours" />
+  <meta property="og:description" content="Gear guide, seasonal temperatures, and what to expect on an Arctic tour in Utqiaġvik. Come prepared and tour with confidence." />
+  <meta property="og:image"       content="https://kiitatours.com/whalebone-arch-sunset.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Tokens ─────────────────────────────────── */
+    :root {
+      --navy:   #0d1b2a;
+      --navy-d: #081320;
+      --teal:   #4ecdc4;
+      --amber:  #f4a261;
+      --ice:    #f5f5f0;
+      --ink:    #1a1a2e;
+      --r-serif: 'Lora', Georgia, serif;
+      --r-sans:  'Inter', system-ui, sans-serif;
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* ── Base ───────────────────────────────────── */
+    body {
+      font-family: var(--r-sans);
+      background: var(--ice);
+      color: var(--ink);
+      line-height: 1;
+    }
+    h1, h2, h3, h4 { font-family: var(--r-serif); }
+
+    /* ── Layout ─────────────────────────────────── */
+    .wrap    { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+    .wrap-md { max-width: 56rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Grain ──────────────────────────────────── */
+    .grain { position: relative; }
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      pointer-events: none;
+      opacity: 0.45;
+      mix-blend-mode: overlay;
+      z-index: 2;
+    }
+
+    /* ── Label / overline ───────────────────────── */
+    .label {
+      font-family: var(--r-sans);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    .label-teal  { color: var(--teal); }
+    .label-amber { color: var(--amber); }
+    .label-ink   { color: rgba(26,26,46,0.45); }
+
+    /* ── Headings ───────────────────────────────── */
+    .display {
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.07;
+    }
+    .h2 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+    .h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    /* ── Buttons ─────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      cursor: pointer;
+      font-family: var(--r-sans);
+      font-weight: 600;
+      border-radius: 9999px;
+      transition: transform 0.25s var(--ease-spring), opacity 0.2s ease, box-shadow 0.25s ease;
+    }
+    .btn:hover  { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+    .btn-teal {
+      background: var(--teal);
+      color: var(--navy);
+      font-size: 0.9375rem;
+      padding: 0.9375rem 1.875rem;
+    }
+    .btn-teal:hover { opacity: 0.92; box-shadow: 0 8px 28px rgba(78,205,196,0.35); }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: var(--ice);
+      font-size: 0.9375rem;
+      padding: 0.9375rem 1.875rem;
+      border: 1.5px solid rgba(245,245,240,0.28);
+    }
+    .btn-ghost-light:hover { border-color: rgba(245,245,240,0.65); }
+
+    .btn-dark-sm {
+      background: rgba(13,27,42,0.08);
+      color: var(--ink);
+      font-size: 0.8125rem;
+      padding: 0.6875rem 1.25rem;
+      border: 1.5px solid rgba(13,27,42,0.14);
+    }
+    .btn-dark-sm:hover { background: rgba(13,27,42,0.14); }
+
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(78,205,196,0.5); }
+      60%       { box-shadow: 0 0 0 12px rgba(78,205,196,0); }
+    }
+    .btn-cta-primary {
+      animation: cta-pulse 2.8s ease-out infinite;
+      font-size: 1.0625rem;
+      padding: 1.125rem 2.25rem;
+    }
+
+    /* ── Nav ─────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,27,42,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.0625rem 1.5rem;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-brand img {
+      height: 2.25rem;
+      width: 2.25rem;
+      object-fit: contain;
+    }
+    .nav-brand-name {
+      font-family: var(--r-serif);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--ice);
+      letter-spacing: -0.02em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(245,245,240,0.65);
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--teal); }
+    .nav-link.active { color: var(--teal); }
+    .nav-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: 2px; }
+    @media (max-width: 599px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── Page Hero ───────────────────────────────── */
+    .page-hero {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 0 4.5rem;
+    }
+    .page-hero-media {
+      position: absolute;
+      inset: 0;
+    }
+    .page-hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+      opacity: 0.22;
+    }
+    .page-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(13,27,42,0.55) 0%,
+        rgba(13,27,42,0.85) 60%,
+        rgba(13,27,42,0.98) 100%
+      );
+    }
+    .page-hero-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(78,205,196,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .page-hero-content .label { margin-bottom: 1.25rem; }
+    .page-hero-title {
+      color: var(--ice);
+      margin-bottom: 1.375rem;
+      max-width: 20ch;
+    }
+    .page-hero-title em {
+      font-style: italic;
+      color: var(--amber);
+    }
+    .page-hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.125rem);
+      color: rgba(245,245,240,0.68);
+      line-height: 1.72;
+      max-width: 46ch;
+    }
+    .page-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.8rem;
+      color: rgba(245,245,240,0.35);
+    }
+    .page-breadcrumb a { color: rgba(245,245,240,0.45); transition: color 0.2s ease; }
+    .page-breadcrumb a:hover { color: var(--teal); }
+    .page-breadcrumb-sep { color: rgba(245,245,240,0.2); }
+
+    /* ── Gear Section ────────────────────────────── */
+    .gear {
+      background: var(--ice);
+      padding: 5.5rem 0;
+    }
+    .gear-header {
+      margin-bottom: 3rem;
+    }
+    .gear-header .label { margin-bottom: 0.75rem; }
+    .gear-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.125rem;
+    }
+    @media (min-width: 600px) { .gear-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .gear-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .gear-card {
+      background: #fff;
+      border-radius: 1.125rem;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(13,27,42,0.06), 0 1px 3px rgba(13,27,42,0.04);
+      display: flex;
+      flex-direction: column;
+    }
+    .gear-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.625rem;
+      background: rgba(78,205,196,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .gear-icon svg { color: var(--teal); }
+    .gear-title {
+      font-family: var(--r-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.625rem;
+      letter-spacing: -0.01em;
+    }
+    .gear-desc {
+      font-size: 0.875rem;
+      color: rgba(26,26,46,0.62);
+      line-height: 1.68;
+    }
+    .gear-note {
+      margin-top: 0.625rem;
+      font-size: 0.8rem;
+      color: rgba(26,26,46,0.42);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .gear-winter-card {
+      background: var(--navy);
+      border-radius: 1.125rem;
+      padding: 1.75rem 1.5rem;
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      box-shadow: 0 4px 20px rgba(13,27,42,0.2);
+    }
+    .gear-winter-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.625rem;
+      background: rgba(244,162,97,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .gear-winter-icon svg { color: var(--amber); }
+    .gear-winter-title {
+      font-family: var(--r-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ice);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .gear-winter-desc {
+      font-size: 0.875rem;
+      color: rgba(245,245,240,0.62);
+      line-height: 1.7;
+    }
+    .gear-winter-desc strong { color: var(--amber); font-weight: 600; }
+
+    /* ── Affiliate disclosure ────────────────────── */
+    .affiliate-disclosure {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.775rem;
+      color: rgba(26,26,46,0.42);
+      line-height: 1.55;
+      margin-bottom: 2.25rem;
+      padding: 0.75rem 1rem;
+      background: rgba(13,27,42,0.04);
+      border-radius: 0.625rem;
+      border: 1px solid rgba(13,27,42,0.07);
+      max-width: fit-content;
+    }
+    .affiliate-disclosure svg { flex-shrink: 0; color: rgba(26,26,46,0.35); }
+
+    /* ── Gear product card ───────────────────────── */
+    .gear-card {
+      background: #fff;
+      border-radius: 1.125rem;
+      padding: 0;
+      box-shadow: 0 2px 12px rgba(13,27,42,0.06), 0 1px 3px rgba(13,27,42,0.04);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
+    }
+    .gear-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(13,27,42,0.12), 0 2px 6px rgba(13,27,42,0.06);
+    }
+    .gear-card-img-wrap {
+      background: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1.25rem 1rem;
+      border-bottom: 1px solid rgba(13,27,42,0.05);
+      min-height: 11rem;
+    }
+    .gear-card-img-wrap img {
+      max-height: 9rem;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .gear-card-body {
+      padding: 1.375rem 1.375rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .gear-card-body .gear-title { margin-bottom: 0.625rem; }
+    .gear-card-body .gear-desc  { flex-grow: 1; margin-bottom: 1.125rem; }
+
+    /* Amazon link button */
+    .gear-amazon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #FF9900;
+      color: #111;
+      font-family: var(--r-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.55rem 1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      width: fit-content;
+      transition: opacity 0.2s ease, transform 0.2s var(--ease-spring);
+    }
+    .gear-amazon-link:hover { opacity: 0.88; transform: translateY(-1px); }
+    .gear-amazon-link:focus-visible { outline: 2px solid #FF9900; outline-offset: 3px; }
+
+    /* Windproof shell — two-option full-width card */
+    .gear-shell-card {
+      background: #fff;
+      border-radius: 1.125rem;
+      padding: 0;
+      box-shadow: 0 2px 12px rgba(13,27,42,0.06), 0 1px 3px rgba(13,27,42,0.04);
+      overflow: hidden;
+      grid-column: 1 / -1;
+    }
+    .gear-shell-header {
+      padding: 1.375rem 1.5rem 0.875rem;
+      border-bottom: 1px solid rgba(13,27,42,0.06);
+    }
+    .gear-shell-desc {
+      font-size: 0.875rem;
+      color: rgba(26,26,46,0.62);
+      line-height: 1.68;
+      margin-top: 0.5rem;
+    }
+    .gear-shell-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    @media (min-width: 640px) {
+      .gear-shell-options { grid-template-columns: 1fr 1fr; }
+    }
+    .gear-shell-option {
+      padding: 1.375rem 1.5rem 1.375rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .gear-shell-option:first-child {
+      border-bottom: 1px solid rgba(13,27,42,0.06);
+    }
+    @media (min-width: 640px) {
+      .gear-shell-option:first-child {
+        border-bottom: none;
+        border-right: 1px solid rgba(13,27,42,0.06);
+      }
+    }
+    .gear-shell-option-img {
+      background: #f8f8f8;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      width: 100%;
+      min-height: 10rem;
+      margin-bottom: 1rem;
+    }
+    .gear-shell-option-img img {
+      max-height: 8.5rem;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .gear-shell-option-badge {
+      font-size: 0.6375rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+      margin-bottom: 0.625rem;
+    }
+    .badge-recommended { background: rgba(78,205,196,0.14); color: #2a9d95; }
+    .badge-budget      { background: rgba(244,162,97,0.14); color: #c4712a; }
+    .gear-shell-option-name {
+      font-family: var(--r-serif);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    /* ── Expect Section ──────────────────────────── */
+    .expect {
+      background: var(--navy);
+      padding: 5.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .expect-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 75% 30%, rgba(78,205,196,0.06) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .expect-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (min-width: 860px) {
+      .expect-inner { grid-template-columns: 1fr 1fr; gap: 5rem; }
+    }
+    .expect-header .label { margin-bottom: 0.75rem; }
+    .expect-header .h2 { color: var(--ice); margin-bottom: 1.25rem; }
+    .expect-header p {
+      font-size: 0.9375rem;
+      color: rgba(245,245,240,0.6);
+      line-height: 1.78;
+    }
+    .expect-pull {
+      margin-top: 1.875rem;
+      padding: 1.375rem 1.5rem;
+      border-left: 3px solid var(--amber);
+      background: rgba(244,162,97,0.07);
+      border-radius: 0 0.75rem 0.75rem 0;
+    }
+    .expect-pull p {
+      font-family: var(--r-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--ice);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .expect-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .expect-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 0.875rem;
+      padding: 1.125rem 1.25rem;
+    }
+    .expect-item-icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background: rgba(78,205,196,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .expect-item-icon svg { color: var(--teal); }
+    .expect-item-title {
+      font-family: var(--r-serif);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--ice);
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.01em;
+    }
+    .expect-item-desc {
+      font-size: 0.8375rem;
+      color: rgba(245,245,240,0.55);
+      line-height: 1.65;
+    }
+
+    /* ── Safety Section ──────────────────────────── */
+    .safety {
+      background: var(--ice);
+      padding: 5.5rem 0;
+    }
+    .safety-header {
+      margin-bottom: 3rem;
+    }
+    .safety-header .label { margin-bottom: 0.75rem; }
+    .safety-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.125rem;
+    }
+    @media (min-width: 600px) { .safety-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .safety-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .safety-card {
+      border-radius: 1.125rem;
+      padding: 1.625rem 1.5rem;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(13,27,42,0.06), 0 1px 3px rgba(13,27,42,0.04);
+    }
+    .safety-card-num {
+      font-family: var(--r-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgba(78,205,196,0.2);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.04em;
+    }
+    .safety-card-title {
+      font-family: var(--r-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .safety-card-desc {
+      font-size: 0.875rem;
+      color: rgba(26,26,46,0.6);
+      line-height: 1.68;
+    }
+
+    /* ── Checklist Section ───────────────────────── */
+    .checklist-section {
+      background: var(--navy-d);
+      padding: 5.5rem 0;
+    }
+    .checklist-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (min-width: 860px) {
+      .checklist-inner { grid-template-columns: 1fr 1fr; gap: 5rem; }
+    }
+    .checklist-header .label { margin-bottom: 0.75rem; }
+    .checklist-header .h2 { color: var(--ice); margin-bottom: 1.25rem; }
+    .checklist-header p {
+      font-size: 0.9375rem;
+      color: rgba(245,245,240,0.58);
+      line-height: 1.78;
+    }
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 0.875rem;
+    }
+    .checklist-check {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: rgba(78,205,196,0.15);
+      border: 1.5px solid rgba(78,205,196,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .checklist-check svg { color: var(--teal); }
+    .checklist-text {
+      font-size: 0.9rem;
+      color: rgba(245,245,240,0.75);
+      line-height: 1.6;
+    }
+    .checklist-text strong {
+      display: block;
+      color: var(--ice);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      font-size: 0.9375rem;
+    }
+
+    /* ── CTA Section ─────────────────────────────── */
+    .cta-section {
+      background: var(--navy);
+      padding: 6.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 80%;
+      background: radial-gradient(ellipse, rgba(78,205,196,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .cta-inner .label { margin-bottom: 1rem; }
+    .cta-headline {
+      color: var(--ice);
+      margin-bottom: 1rem;
+    }
+    .cta-rule {
+      width: 3rem;
+      height: 2px;
+      background: var(--amber);
+      margin: 1.25rem auto;
+      border: none;
+    }
+    .cta-sub {
+      font-size: 1rem;
+      color: rgba(245,245,240,0.6);
+      line-height: 1.75;
+      max-width: 42ch;
+      margin: 0 auto 2.25rem;
+    }
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    .footer {
+      background: var(--navy-d);
+      padding: 2.75rem 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .footer-brand img {
+      height: 1.875rem;
+      width: 1.875rem;
+      object-fit: contain;
+      opacity: 0.65;
+    }
+    .footer-brand-name {
+      font-family: var(--r-serif);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: rgba(245,245,240,0.6);
+      letter-spacing: -0.01em;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .footer-link {
+      font-size: 0.8125rem;
+      color: rgba(245,245,240,0.38);
+      transition: color 0.2s ease;
+    }
+    .footer-link:hover { color: rgba(245,245,240,0.7); }
+    .footer-link.active { color: rgba(245,245,240,0.6); }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(245,245,240,0.28);
+    }
+
+    /* ── Divider ─────────────────────────────────── */
+    .section-divider {
+      width: 3rem;
+      height: 2px;
+      background: var(--teal);
+      opacity: 0.35;
+      border: none;
+      margin: 0;
+    }
+    :root { --navy-d: #081320; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════ NAV ══════════════════════ -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Kiita Tours — Home">
+        <img src={logo} alt="" aria-hidden="true" />
+        <span class="nav-brand-name">Kiita Tours</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/#tours"      class="nav-link">Tours</a>
+        <a href="/#guide"      class="nav-link">About</a>
+        <a href="/#experience" class="nav-link">Experience</a>
+        <a href="/safety-preparation" class="nav-link active">Prepare</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-teal" style="font-size:0.8125rem;padding:0.625rem 1.25rem;" onclick="gtag('event', 'book_click', {source: 'nav_safety'})">Book a Tour</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════ PAGE HERO ══════════════════════ -->
+  <section class="page-hero grain" aria-label="Page header">
+    <div class="page-hero-media" aria-hidden="true">
+      <img src={arcticImg} alt="" fetchpriority="high" />
+    </div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-glow" aria-hidden="true"></div>
+
+    <div class="wrap page-hero-content">
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Kiita Tours</a>
+        <span class="page-breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Safety &amp; Preparation</span>
+      </nav>
+
+      <p class="label label-teal">Know Before You Go</p>
+
+      <h1 class="display page-hero-title">
+        Prepared Guests<br />Have the Best<br />
+        <em>Arctic Experiences.</em>
+      </h1>
+
+      <p class="page-hero-sub">
+        The Arctic is extraordinary — and it's real. Temperatures, wind, and conditions
+        vary widely by season. This page gives you everything you need to arrive
+        confident, comfortable, and ready to enjoy every moment of your tour.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ GEAR / WHAT TO WEAR ══════════════════════ -->
+  <section class="gear" id="gear" aria-labelledby="gear-heading">
+    <div class="wrap">
+      <div class="gear-header">
+        <p class="label label-ink">Clothing &amp; Gear</p>
+        <h2 class="h2" id="gear-heading" style="color: var(--navy); margin-top: 0.625rem;">What to Wear in Utqiaġvik</h2>
+        <p style="margin-top: 0.875rem; font-size: 0.9375rem; color: rgba(26,26,46,0.6); line-height: 1.72; max-width: 52ch;">
+          Dressing correctly is the single most important thing you can do before your tour. I've guided visitors from all over the world, and the ones who struggled were almost always the ones who underestimated the wind. Get this part right and the cold becomes part of the adventure — not the obstacle.
+        </p>
+      </div>
+
+      <!-- Affiliate Disclosure -->
+      <div class="affiliate-disclosure" role="note">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4M12 8h.01"/></svg>
+        As an Amazon Associate, I earn from qualifying purchases. Links below are personal recommendations based on real Arctic conditions in Utqiaġvik.
+      </div>
+
+      <div class="gear-grid">
+
+        <!-- Base Layer -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearShirt} alt="Fleece-lined thermal base layer shirt — recommended for Arctic tours in Utqiaġvik" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Base Layer</h3>
+            <p class="gear-desc">This is the layer closest to your skin, and it matters more than most people expect. Up here, if your base layer holds sweat against you, the cold gets in fast and doesn't leave. I've seen people feel fine one minute and genuinely uncomfortable ten minutes later just because they were wearing cotton underneath. You want something that pulls moisture away and holds a little heat on its own — a fleece-lined thermal like this one does both. Don't skip this layer or treat it as optional. It's your foundation.</p>
+            <a href="https://amzn.to/3QsPGDz" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop insulated base layer shirt on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Insulating Mid-Layer -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearSweater} alt="Fleece-lined insulating mid-layer sweater — recommended for Arctic cold in Utqiaġvik" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Insulating Mid-Layer</h3>
+            <p class="gear-desc">Think of this as the engine of your warmth. Your base layer moves moisture, your outer shell blocks the wind — but this is the layer that actually traps heat. Out at Point Barrow or standing by the ocean, you're going to be stationary for stretches of time. When you stop moving, you lose warmth quickly. A heavy fleece-lined sweatshirt like this one is exactly what I tell visitors to pack. It's thick enough for real Arctic cold, and you can layer it under a parka without losing mobility. Don't bring a light hoodie and call it a mid-layer — it won't cut it once the wind picks up.</p>
+            <a href="https://amzn.to/3OwMmqi" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop insulating mid-layer sweater on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Boots -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearBoots} alt="Columbia insulated waterproof winter boots — rated for extreme cold in Arctic conditions" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Insulated Waterproof Boots</h3>
+            <p class="gear-desc">Cold feet will end a tour faster than anything else. I've seen visitors show up in regular winter boots and be miserable within twenty minutes. The ground out here — especially near the water and on the tundra — is wet, icy, and uneven. You need boots rated for extreme cold, with real waterproofing and a grip sole that handles ice. Columbia makes a boot I trust for these conditions. If it's not rated for -25°F or lower, it's probably not warm enough for winter and late fall in Utqiaġvik. And please — no sneakers, dress shoes, or fashion boots. The ground won't let you get away with it.</p>
+            <a href="https://amzn.to/42ak2xf" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop insulated waterproof boots on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Liner Gloves -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearLinerGloves} alt="Thin knit liner gloves — worn under mittens for Arctic cold layering" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Liner Gloves</h3>
+            <p class="gear-desc">These go on before your mittens and make a real difference. When you need to take your mittens off to use your camera or phone, bare hands in Arctic wind can start hurting in under a minute. Liner gloves like these let you do what you need to do without exposing your skin directly to the cold. They're thin enough to use a touchscreen with, and they add a meaningful extra layer of warmth inside your outer mittens. Don't treat them as optional — they're one of the easiest pieces of gear to pack and one of the most useful out there.</p>
+            <a href="https://amzn.to/3Q4kpH4" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop liner gloves on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Mittens -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearMittens} alt="Carhartt insulated waterproof work mittens — for extreme Arctic cold and wind" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Outer Mittens</h3>
+            <p class="gear-desc">Regular gloves are not enough for Utqiaġvik winters. When the wind is blowing at -20°F or colder, individual fingers in a glove lose heat to each other and to the air. Mittens keep your fingers together so they warm each other, and a good insulated waterproof shell mitten like the Carhartt I recommend blocks wind completely. I wear this style myself when I'm out in the worst conditions. Wear your liner gloves underneath — that combination is what protects your hands in real Arctic cold. Frostbite on fingers happens faster than most people think.</p>
+            <a href="https://amzn.to/4tQRCUX" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop insulated outer mittens on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Wool Socks -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearSocks} alt="Merino wool thermal socks — essential for keeping feet warm in Arctic cold" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Wool Socks</h3>
+            <p class="gear-desc">This one gets overlooked more than anything else, and it costs people comfort every time. Even the best winter boots won't save you if you're wearing thin cotton socks inside them. Your feet sit closest to the cold ground and they don't move much while we're walking and looking around. Merino wool socks like these stay warm even when damp, they don't compress over time, and they make a noticeable difference inside your boots. Wear at least one thick pair — two in extreme cold. Cold feet drain your energy and take the joy out of being outside. Don't let that happen over a pair of socks.</p>
+            <a href="https://amzn.to/486l2WG" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop merino wool socks on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Balaclava / Facemask -->
+        <div class="gear-card">
+          <div class="gear-card-img-wrap">
+            <img src={gearFacemask} alt="Full-cover balaclava face mask — essential for Arctic wind and extreme cold protection" />
+          </div>
+          <div class="gear-card-body">
+            <h3 class="gear-title">Balaclava / Facemask</h3>
+            <p class="gear-desc">Out at Point Barrow, there's nothing between you and the Arctic Ocean wind — no trees, no buildings, nothing. When it's cold and blowing, exposed skin on your face will hurt within minutes. A balaclava that covers your nose, cheeks, and chin is not overkill. It is the right tool for where we're going. This style covers your face completely and tucks into your jacket collar so wind can't get in at the neck. Even in shoulder seasons — September, October, early May — the wind off the ocean can surprise people. Put it on before you need it, not after your face is already numb.</p>
+            <a href="https://amzn.to/3QgIYk0" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop balaclava face mask on Amazon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+              Shop on Amazon
+            </a>
+          </div>
+        </div>
+
+        <!-- Windproof Outer Shell — full width, two options -->
+        <div class="gear-shell-card">
+          <div class="gear-shell-header">
+            <h3 class="gear-title" style="margin-bottom: 0;">Windproof Outer Shell (Parka)</h3>
+            <p class="gear-shell-desc">This is your armor against the wind. Everything else you're wearing — the base layer, the mid-layer, the socks — all of it gets defeated if the wind can cut through your outer layer. In Utqiaġvik, Arctic wind is constant and it strips heat fast. You need a parka rated for serious cold, with a hood, windproof shell, and real insulation. I've listed two options: the one I'd recommend if you want the best performance, and a more affordable alternative that still does the job. Either way, make sure it comes well past your waist and that the hood fits over your hat.</p>
+          </div>
+          <div class="gear-shell-options">
+            <div class="gear-shell-option">
+              <span class="gear-shell-option-badge badge-recommended">Recommended</span>
+              <div class="gear-shell-option-img">
+                <img src={gearNFJacket} alt="The North Face insulated parka — recommended for Arctic winters in Utqiaġvik" />
+              </div>
+              <div class="gear-shell-option-name">The North Face — Gotham III Jacket</div>
+              <p class="gear-desc" style="margin-bottom: 1rem;">This is the kind of jacket that actually handles extreme Arctic cold. Heavily insulated, hooded, and built with a shell that stops wind. The fur-lined hood adds real face protection when the wind is blowing hard. If you're visiting in fall, winter, or spring and want to be comfortable the whole time, this is the jacket. It's an investment, but it earns it out here.</p>
+              <a href="https://amzn.to/3O6mBgD" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop The North Face Gotham jacket on Amazon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+                Shop on Amazon
+              </a>
+            </div>
+            <div class="gear-shell-option">
+              <span class="gear-shell-option-badge badge-budget">Budget Alternative</span>
+              <div class="gear-shell-option-img">
+                <img src={gearLeviJacket} alt="Levi's puffer parka — budget-friendly alternative for cold weather touring" />
+              </div>
+              <div class="gear-shell-option-name">Levi's — Quilted Puffer Parka</div>
+              <p class="gear-desc" style="margin-bottom: 1rem;">If price is a factor, a good long puffer parka still does meaningful work. This Levi's option runs long enough to cover your hips, which matters because that's where heat escapes when you're bending and walking. It's best for milder cold — late spring, early fall, or summer. If you're visiting in the depths of winter, I'd push harder for the heavier option above. But for shoulder seasons and summer, this keeps you comfortable without the premium price.</p>
+              <a href="https://amzn.to/4vztEPx" target="_blank" rel="noopener noreferrer sponsored" class="gear-amazon-link" aria-label="Shop Levi's puffer parka on Amazon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.153 7.415C14.536 5.042 8.087 5 2.417 7.24l-.69.287C.59 7.96.106 9.203.53 10.34c.424 1.137 1.667 1.68 2.805 1.256l.69-.287c4.914-2.046 10.494-2.004 15.38.11 1.124.47 2.379-.065 2.802-1.195.423-1.13-.13-2.342-1.253-2.81zM3 17.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S5.33 16 4.5 16 3 16.67 3 17.5zm9 2c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm6-1c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S18 17.67 18 18.5z"/></svg>
+                Shop on Amazon
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Winter Warning Card -->
+        <div class="gear-winter-card">
+          <div class="gear-winter-icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364"/></svg>
+          </div>
+          <div>
+            <h3 class="gear-winter-title">Visiting in Fall, Winter, or Spring?</h3>
+            <p class="gear-winter-desc">
+              Temperatures in Utqiaġvik regularly reach <strong>-40°F (-40°C) with windchill</strong> between October and April. Every item in this guide matters in those months — none of it is optional. Layer all of it: base layer, mid-layer, parka, wool socks in insulated boots, liner gloves under mittens, and a balaclava that covers your face completely. If you're not sure your gear is cold enough for the dates you're visiting, reach out before you book. I'd rather help you prepare than have you cut a tour short because you're too cold to enjoy it.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ WHAT TO EXPECT ══════════════════════ -->
+  <section class="expect grain" id="expect" aria-labelledby="expect-heading">
+    <div class="expect-glow" aria-hidden="true"></div>
+    <div class="wrap" style="position: relative; z-index: 2;">
+      <div class="expect-inner">
+
+        <div class="expect-header">
+          <p class="label label-teal">Conditions &amp; Expectations</p>
+          <h2 class="h2" id="expect-heading">What to Expect on Your Tour</h2>
+          <p>The Arctic is not a controlled environment. That's exactly what makes it extraordinary. Robin has spent his whole life reading this landscape — he knows how to keep guests comfortable while showing them the real thing.</p>
+          <div class="expect-pull">
+            <p>"Every season here is different. I've been out in every kind of weather this place has. My job is to help you experience it safely — and honestly, the days that feel the most alive are the ones where you're right in it."</p>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.85rem; color: rgba(245,245,240,0.4); font-style: italic;">— Robin Mongoyak, Kiita Tours guide</p>
+        </div>
+
+        <div class="expect-list">
+
+          <div class="expect-item">
+            <div class="expect-item-icon" aria-hidden="true">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </div>
+            <div>
+              <div class="expect-item-title">Weather Can Change Quickly</div>
+              <p class="expect-item-desc">Arctic conditions can shift within an hour. Robin monitors conditions before and during every tour. If weather becomes unsafe, routes may be adjusted or the tour may be rescheduled — your safety always comes first.</p>
+            </div>
+          </div>
+
+          <div class="expect-item">
+            <div class="expect-item-icon" aria-hidden="true">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <div class="expect-item-title">Small Groups Stay Personal &amp; Safe</div>
+              <p class="expect-item-desc">With a maximum of 3 guests, Robin can give each person direct attention. No one gets left behind, overlooked, or rushed. This also means Robin can respond immediately if someone needs a break or is feeling the cold.</p>
+            </div>
+          </div>
+
+          <div class="expect-item">
+            <div class="expect-item-icon" aria-hidden="true">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="expect-item-title">Every Season Has Its Own Character</div>
+              <p class="expect-item-desc">Summer brings the midnight sun and migratory wildlife. Fall brings freeze-up and the start of polar darkness. Winter is extreme cold and the aurora. Spring brings ice breakup and bowhead whale migration. Ask Robin what's happening during your visit — timing matters here.</p>
+            </div>
+          </div>
+
+          <div class="expect-item">
+            <div class="expect-item-icon" aria-hidden="true">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            </div>
+            <div>
+              <div class="expect-item-title">Robin Handles the Logistics</div>
+              <p class="expect-item-desc">He picks you up, manages the route, and knows every location on these tours from decades of living here. You don't need to navigate, plan, or find anything on your own — just show up dressed and ready.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SAFETY APPROACH ══════════════════════ -->
+  <section class="safety" id="safety" aria-labelledby="safety-heading">
+    <div class="wrap">
+      <div class="safety-header">
+        <p class="label label-ink">How We Operate</p>
+        <h2 class="h2" id="safety-heading" style="color: var(--navy); margin-top: 0.625rem;">Our Approach to Safety</h2>
+        <p style="margin-top: 0.875rem; font-size: 0.9375rem; color: rgba(26,26,46,0.6); line-height: 1.72; max-width: 52ch;">
+          Kiita Tours is built on local knowledge and honest judgment — not on procedures that look good on paper. Here is what that means in practice.
+        </p>
+      </div>
+
+      <div class="safety-grid">
+
+        <div class="safety-card">
+          <div class="safety-card-num" aria-hidden="true">01</div>
+          <h3 class="safety-card-title">Decades of Local Knowledge</h3>
+          <p class="safety-card-desc">Robin was born and raised in Utqiaġvik. He knows the land, the weather patterns, the terrain, and the risks in every season from a lifetime of firsthand experience. That knowledge is the foundation of every tour he leads.</p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-card-num" aria-hidden="true">02</div>
+          <h3 class="safety-card-title">Weather Awareness First</h3>
+          <p class="safety-card-desc">Robin checks conditions before every tour and makes judgment calls throughout. If he sees something that doesn't feel right — wind, temperature, visibility — he will adjust the plan. No guest has ever pushed past a safety concern on a Kiita tour.</p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-card-num" aria-hidden="true">03</div>
+          <h3 class="safety-card-title">Guest Comfort Is Communicated</h3>
+          <p class="safety-card-desc">Robin will ask how you're feeling. If you're too cold, if something doesn't feel right, or if you need to stop — say so. These tours are designed around your experience, not a fixed itinerary. You will always be heard.</p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-card-num" aria-hidden="true">04</div>
+          <h3 class="safety-card-title">Small Group, Full Attention</h3>
+          <p class="safety-card-desc">With no more than 3 guests, Robin can give every person in the group direct attention at all times. There are no crowds to manage, no one walking too far ahead. The group moves and decides together.</p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-card-num" aria-hidden="true">05</div>
+          <h3 class="safety-card-title">Honest About Conditions</h3>
+          <p class="safety-card-desc">If conditions are unsafe, the tour will be rescheduled. Robin will not run a tour that he would not personally be comfortable leading. Guests are always informed of any changes as early as possible.</p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-card-num" aria-hidden="true">06</div>
+          <h3 class="safety-card-title">Open Communication</h3>
+          <p class="safety-card-desc">Before your tour, Robin is available to answer questions about what to expect, what to bring, and what conditions look like for your dates. If anything feels uncertain, reach out — that's what he's there for.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ BEFORE YOUR TOUR CHECKLIST ══════════════════════ -->
+  <section class="checklist-section grain" id="checklist" aria-labelledby="checklist-heading">
+    <div class="wrap" style="position: relative; z-index: 2;">
+      <div class="checklist-inner">
+
+        <div class="checklist-header">
+          <p class="label label-teal">Before You Arrive</p>
+          <h2 class="h2" id="checklist-heading">Your Pre-Tour Checklist</h2>
+          <p>A few simple steps before you arrive in Utqiaġvik will make your tour significantly better. Robin does the hard work — this is what you can do on your end.</p>
+        </div>
+
+        <div class="checklist">
+
+          <div class="checklist-item">
+            <div class="checklist-check" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="checklist-text">
+              <strong>Dress in proper layers</strong>
+              Review the gear guide above and pack accordingly. If visiting in cold months, err on the side of too warm — you can always remove a layer.
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <div class="checklist-check" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="checklist-text">
+              <strong>Book before you arrive</strong>
+              Tours cannot always be accommodated same-day. Contact Robin through the booking form so he can confirm your date, time, and any details specific to your visit.
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <div class="checklist-check" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="checklist-text">
+              <strong>Mention any health concerns or limitations</strong>
+              If you have mobility concerns, cold intolerance, or anything else Robin should know, let him know before the tour. He can adjust as needed.
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <div class="checklist-check" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="checklist-text">
+              <strong>Bring your questions</strong>
+              Robin loves questions — about culture, history, wildlife, or life in Utqiaġvik. Don't hold back. That conversation is what makes the experience.
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <div class="checklist-check" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="checklist-text">
+              <strong>Bring a camera</strong>
+              The light in Utqiaġvik is unlike anywhere else in the world — especially at the Whalebone Arch and out at Point Barrow. Don't leave without it.
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <div class="checklist-check" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="checklist-text">
+              <strong>Arrive ready for wind</strong>
+              Even when the air temperature is manageable, Arctic wind can make it feel significantly colder. Your outer layer needs to block wind — not just insulate.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA ══════════════════════ -->
+  <section class="cta-section" id="book" aria-labelledby="cta-heading">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner">
+      <p class="label label-teal">Ready to Plan Your Visit</p>
+      <h2 class="h2 cta-headline" id="cta-heading">Have Questions?<br />Robin Will Answer Them.</h2>
+      <hr class="cta-rule" />
+      <p class="cta-sub">
+        If anything on this page raised a question — about your gear, your dates, your physical condition, or what to expect — reach out before you book. Robin is happy to help you prepare. A well-prepared guest has the best experience.
+      </p>
+      <div class="cta-actions">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-teal btn-cta-primary"
+          onclick="gtag('event', 'book_click', {source: 'safety_page_cta'})"
+        >
+          Book a Tour
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a
+          href="mailto:kiitatours@gmail.com?subject=Question%20Before%20My%20Tour"
+          class="btn btn-ghost-light"
+        >
+          Email Robin a Question
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap footer-inner">
+      <a href="/" class="footer-brand" aria-label="Kiita Tours — Home">
+        <img src={logo} alt="" aria-hidden="true" />
+        <span class="footer-brand-name">Kiita Tours LLC</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#tours"             class="footer-link">Tours</a>
+        <a href="/#guide"             class="footer-link">About</a>
+        <a href="/#experience"        class="footer-link">Experience</a>
+        <a href="/safety-preparation" class="footer-link active">Prepare</a>
+        <a href="/#booking"           class="footer-link">Book</a>
+      </nav>
+      <p class="footer-copy">Utqiaġvik, Alaska &nbsp;·&nbsp; &copy; 2025 Kiita Tours LLC</p>
+    </div>
+  </footer>
+
+</body>
+</html>
