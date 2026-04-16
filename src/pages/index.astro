@@ -601,7 +601,21 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
     }
     .tour-footer {
       margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
+    .tour-book-link {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: opacity 0.2s ease;
+    }
+    .tour-book-link:hover { opacity: 0.75; }
 
     /* ── Guide ───────────────────────────────────── */
     .guide {
@@ -1547,7 +1561,8 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
           </div>
           <p class="tour-desc">Visit key locations including the Whalebone Arch and local viewpoints while learning about Iñupiat culture, daily life, and the history of Utqiaġvik.</p>
           <div class="tour-footer">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-dark-sm">Book This Tour</a>
+            <a href="/tours/utqiagvik-cultural-city-tour" class="btn btn-dark-sm">View Tour Details</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="tour-book-link">Book Now →</a>
           </div>
         </article>
 
@@ -1568,7 +1583,8 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
           </div>
           <p class="tour-desc">Journey to the northernmost point in the United States while learning about Arctic geography, traditional subsistence life, wildlife, and environmental conditions.</p>
           <div class="tour-footer">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-dark-sm">Book This Tour</a>
+            <a href="/tours/point-barrow-arctic-experience" class="btn btn-dark-sm">View Tour Details</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="tour-book-link">Book Now →</a>
           </div>
         </article>
 

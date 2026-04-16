@@ -1,0 +1,631 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const logo         = `${base}/Kiita-Tours-Logo.png`;
+const heroImg      = `${base}/whalebone-arch-sunset.jpg`;
+const robinImg     = `${base}/robin-8021.jpg`;
+const ihlcImg      = `${base}/IHLC.webp`;
+const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QTYJY5B07"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2QTYJY5B07');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon"             type="image/png" href={`${base}/Kiita-Tours-Logo.png`} />
+  <link rel="shortcut icon"    type="image/png" href={`${base}/Kiita-Tours-Logo.png`} />
+  <link rel="apple-touch-icon"                  href={`${base}/Kiita-Tours-Logo.png`} />
+
+  <title>Utqiaġvik Cultural City Tour | Barrow Alaska Guided Tour — Kiita Tours</title>
+  <meta name="description" content="Explore Utqiaġvik (Barrow), Alaska on a guided cultural city tour led by Robin Mongoyak, a lifelong Iñupiat guide. Visit the Whalebone Arch, Iñupiat Heritage Center, and learn about life in one of America's most remote communities. 1.5–2 hrs · $90/person." />
+  <link rel="canonical" href="https://kiitatours.com/tours/utqiagvik-cultural-city-tour" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Kiita Tours" />
+  <meta property="og:url"         content="https://kiitatours.com/tours/utqiagvik-cultural-city-tour" />
+  <meta property="og:title"       content="Utqiaġvik Cultural City Tour | Barrow Alaska — Kiita Tours" />
+  <meta property="og:description" content="A guided cultural tour of Utqiaġvik (Barrow), Alaska with Robin Mongoyak, a lifelong Iñupiat guide. The Whalebone Arch, Iñupiat Heritage Center, and the real story of life in Arctic Alaska." />
+  <meta property="og:image"       content="https://kiitatours.com/whalebone-arch-sunset.jpg" />
+  <meta property="og:image:alt"   content="Whalebone Arch at sunset in Utqiaġvik, Alaska — a stop on the Kiita Tours cultural city tour" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Utqiaġvik Cultural City Tour | Barrow Alaska — Kiita Tours" />
+  <meta name="twitter:description" content="Guided cultural tour of Utqiaġvik (Barrow), Alaska. Whalebone Arch, Iñupiat Heritage Center, and real Arctic life. $90/person, max 3 guests." />
+  <meta name="twitter:image"       content="https://kiitatours.com/whalebone-arch-sunset.jpg" />
+
+  <!-- JSON-LD: TouristTrip -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Utqiaġvik Cultural City Tour",
+    "description": "A guided cultural tour of Utqiaġvik (Barrow), Alaska. Visit the Whalebone Arch, the Iñupiat Heritage Center, and community landmarks while learning about Iñupiat history, traditions, and daily life from a lifelong local guide.",
+    "url": "https://kiitatours.com/tours/utqiagvik-cultural-city-tour",
+    "image": "https://kiitatours.com/whalebone-arch-sunset.jpg",
+    "touristType": ["Cultural tourists", "History tourists"],
+    "inLanguage": "en",
+    "duration": "PT2H",
+    "maximumAttendeeCapacity": 3,
+    "itinerary": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Pickup in Utqiaġvik, Alaska" },
+        { "@type": "ListItem", "position": 2, "name": "The Whalebone Arch — Utqiaġvik's iconic cultural landmark" },
+        { "@type": "ListItem", "position": 3, "name": "The Iñupiat Heritage Center museum" },
+        { "@type": "ListItem", "position": 4, "name": "Cultural community sites and local viewpoints" },
+        { "@type": "ListItem", "position": 5, "name": "Arctic coastline views" },
+        { "@type": "ListItem", "position": 6, "name": "Stories and context from Robin Mongoyak, lifelong Utqiaġvik resident" }
+      ]
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Kiita Tours LLC",
+      "url": "https://kiitatours.com",
+      "image": "https://kiitatours.com/Kiita-Tours-Logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Utqiaġvik",
+        "addressRegion": "AK",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 71.2906,
+        "longitude": -156.7887
+      },
+      "founder": { "@type": "Person", "name": "Robin Mongoyak" }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "90",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "$90 per person, $120 minimum. Year-round, weather permitting. Maximum 3 guests."
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Kiita Tours", "item": "https://kiitatours.com" },
+      { "@type": "ListItem", "position": 2, "name": "Tours", "item": "https://kiitatours.com/#tours" },
+      { "@type": "ListItem", "position": 3, "name": "Utqiaġvik Cultural City Tour", "item": "https://kiitatours.com/tours/utqiagvik-cultural-city-tour" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Tokens ──────────────────────────────────── */
+    :root {
+      --navy:   #0d1b2a;
+      --navy-d: #081320;
+      --teal:   #4ecdc4;
+      --amber:  #f4a261;
+      --ice:    #f5f5f0;
+      --ink:    #1a1a2e;
+      --r-serif: 'Lora', Georgia, serif;
+      --r-sans:  'Inter', system-ui, sans-serif;
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* ── Base ────────────────────────────────────── */
+    body { font-family: var(--r-sans); background: var(--ice); color: var(--ink); line-height: 1; }
+    h1, h2, h3, h4 { font-family: var(--r-serif); }
+
+    /* ── Layout ──────────────────────────────────── */
+    .wrap    { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Grain ───────────────────────────────────── */
+    .grain { position: relative; }
+    .grain::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+      background-repeat: repeat; pointer-events: none; opacity: 0.45; mix-blend-mode: overlay; z-index: 2;
+    }
+
+    /* ── Labels ──────────────────────────────────── */
+    .label { font-family: var(--r-sans); font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; }
+    .label-teal  { color: var(--teal); }
+    .label-amber { color: var(--amber); }
+    .label-ink   { color: rgba(26,26,46,0.45); }
+
+    /* ── Headings ─────────────────────────────────── */
+    .display { font-size: clamp(2.2rem, 5vw, 3.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.07; }
+    .h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.12; }
+
+    /* ── Buttons ─────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: none; cursor: pointer; font-family: var(--r-sans); font-weight: 600; border-radius: 9999px;
+      transition: transform 0.25s var(--ease-spring), opacity 0.2s ease, box-shadow 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+    .btn-teal  { background: var(--teal); color: var(--navy); font-size: 0.9375rem; padding: 0.9375rem 1.875rem; }
+    .btn-teal:hover { opacity: 0.92; box-shadow: 0 8px 28px rgba(78,205,196,0.35); }
+    .btn-ghost-light { background: transparent; color: var(--ice); font-size: 0.9375rem; padding: 0.9375rem 1.875rem; border: 1.5px solid rgba(245,245,240,0.28); }
+    .btn-ghost-light:hover { border-color: rgba(245,245,240,0.65); }
+    .btn-ghost-dark { background: transparent; color: var(--ink); font-size: 0.875rem; padding: 0.75rem 1.5rem; border: 1.5px solid rgba(13,27,42,0.2); border-radius: 9999px; }
+    .btn-ghost-dark:hover { border-color: rgba(13,27,42,0.45); }
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(78,205,196,0.5); }
+      60%       { box-shadow: 0 0 0 12px rgba(78,205,196,0); }
+    }
+    .btn-cta-primary { animation: cta-pulse 2.8s ease-out infinite; font-size: 1.0625rem; padding: 1.125rem 2.25rem; }
+
+    /* ── Nav ─────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,27,42,0.92);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 1.0625rem 1.5rem; max-width: 72rem; margin: 0 auto; }
+    .nav-brand { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-brand img { height: 2.25rem; width: 2.25rem; object-fit: contain; }
+    .nav-brand-name { font-family: var(--r-serif); font-size: 1.125rem; font-weight: 600; color: var(--ice); letter-spacing: -0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-link { font-size: 0.875rem; font-weight: 500; color: rgba(245,245,240,0.65); transition: color 0.2s ease; }
+    .nav-link:hover { color: var(--teal); }
+    .nav-link.active { color: var(--teal); }
+    @media (max-width: 599px) { .nav-links { display: none; } }
+
+    /* ── Page Hero ───────────────────────────────── */
+    .page-hero { background: var(--navy); position: relative; overflow: hidden; padding: 5rem 0 4.5rem; }
+    .page-hero-media { position: absolute; inset: 0; }
+    .page-hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; opacity: 0.3; }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(13,27,42,0.45) 0%, rgba(13,27,42,0.78) 50%, rgba(13,27,42,0.97) 100%);
+    }
+    .page-hero-content { position: relative; z-index: 2; }
+    .page-breadcrumb { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2.5rem; font-size: 0.8rem; color: rgba(245,245,240,0.35); }
+    .page-breadcrumb a { color: rgba(245,245,240,0.45); transition: color 0.2s ease; }
+    .page-breadcrumb a:hover { color: var(--teal); }
+    .page-breadcrumb-sep { color: rgba(245,245,240,0.2); }
+    .page-hero-content .label { margin-bottom: 1.25rem; }
+    .page-hero-title { color: var(--ice); margin-bottom: 1.25rem; max-width: 22ch; }
+    .page-hero-title em { font-style: italic; color: var(--amber); }
+    .page-hero-sub { font-size: clamp(1rem, 1.8vw, 1.125rem); color: rgba(245,245,240,0.68); line-height: 1.72; max-width: 44ch; margin-bottom: 2rem; }
+
+    /* ── Tour Snapshot ───────────────────────────── */
+    .tour-snapshot { background: #fff; border-bottom: 1px solid rgba(13,27,42,0.07); padding: 2.5rem 0; }
+    .snapshot-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: rgba(13,27,42,0.07); border-radius: 1rem; overflow: hidden; margin-bottom: 2rem;
+    }
+    @media (min-width: 600px) { .snapshot-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 900px) { .snapshot-grid { grid-template-columns: repeat(6, 1fr); } }
+    .snapshot-item { background: #fff; padding: 1.25rem 1rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+    .snapshot-label { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(26,26,46,0.4); }
+    .snapshot-value { font-family: var(--r-serif); font-size: 1rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; line-height: 1.3; }
+    .snapshot-sub { font-size: 0.75rem; color: rgba(26,26,46,0.45); }
+    .snapshot-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .price-note { font-size: 0.8125rem; color: rgba(26,26,46,0.5); }
+
+    /* ── Tour Body ───────────────────────────────── */
+    .tour-body { background: var(--ice); padding: 5rem 0; }
+    .tour-body-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; }
+    @media (min-width: 860px) { .tour-body-grid { grid-template-columns: 1fr 380px; gap: 5rem; } }
+    .tour-body-text p { font-size: 0.9375rem; color: rgba(26,26,46,0.7); line-height: 1.8; margin-bottom: 1.125rem; }
+    .tour-body-text p:last-child { margin-bottom: 0; }
+    .tour-pull { margin: 1.875rem 0; padding: 1.375rem 1.5rem; border-left: 3px solid var(--amber); background: rgba(244,162,97,0.07); border-radius: 0 0.75rem 0.75rem 0; }
+    .tour-pull p { font-family: var(--r-serif); font-size: 1.05rem; font-style: italic; color: var(--ink); line-height: 1.65; margin: 0; }
+    .tour-pull cite { display: block; font-size: 0.8125rem; color: rgba(26,26,46,0.45); font-style: normal; margin-top: 0.75rem; }
+
+    /* Sidebar photo */
+    .tour-photo-wrap { position: relative; }
+    .tour-photo-frame { border-radius: 1.25rem; overflow: hidden; box-shadow: 0 24px 64px rgba(13,27,42,0.16), 0 4px 16px rgba(13,27,42,0.1); aspect-ratio: 3/4; }
+    .tour-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .tour-photo-badge { position: absolute; bottom: -1rem; right: -0.75rem; background: var(--navy); color: var(--ice); border-radius: 0.875rem; padding: 1rem 1.25rem; box-shadow: 0 8px 24px rgba(13,27,42,0.25); }
+    .tour-photo-badge-line1 { font-family: var(--r-serif); font-size: 0.875rem; font-weight: 700; color: var(--teal); margin-bottom: 0.2rem; }
+    .tour-photo-badge-line2 { font-size: 0.725rem; color: rgba(245,245,240,0.55); line-height: 1.5; }
+
+    /* ── Locations ───────────────────────────────── */
+    .locations { background: var(--navy); padding: 5rem 0; position: relative; overflow: hidden; }
+    .locations-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 60%, rgba(78,205,196,0.06) 0%, transparent 55%); pointer-events: none; }
+    .locations-inner { position: relative; z-index: 2; }
+    .locations-header { margin-bottom: 2.5rem; }
+    .locations-header .label { margin-bottom: 0.75rem; }
+    .locations-header .h2 { color: var(--ice); }
+    .locations-header p { margin-top: 0.875rem; font-size: 0.9375rem; color: rgba(245,245,240,0.55); line-height: 1.72; max-width: 44ch; }
+    .locations-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 640px) { .locations-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .locations-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .location-card {
+      border-radius: 1.125rem; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      display: flex; flex-direction: column;
+    }
+    .location-card-img { position: relative; overflow: hidden; }
+    .location-card-img img { width: 100%; height: 13rem; object-fit: cover; transition: transform 0.6s ease; display: block; }
+    .location-card:hover .location-card-img img { transform: scale(1.04); }
+    .location-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,19,32,0.7) 0%, rgba(8,19,32,0.1) 55%, transparent 100%);
+    }
+    .location-card-body {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-top: none;
+      padding: 1.25rem;
+      flex-grow: 1;
+    }
+    .location-card-label { font-size: 0.6375rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: var(--teal); margin-bottom: 0.375rem; }
+    .location-card-name { font-family: var(--r-serif); font-size: 1rem; font-weight: 700; color: var(--ice); letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+    .location-card-desc { font-size: 0.8375rem; color: rgba(245,245,240,0.52); line-height: 1.65; }
+
+    /* ── Guide Mini ──────────────────────────────── */
+    .guide-mini { background: var(--navy-d); padding: 5rem 0; }
+    .guide-mini-inner { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+    @media (min-width: 700px) { .guide-mini-inner { grid-template-columns: 180px 1fr; } }
+    .guide-mini-photo { border-radius: 1.125rem; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.3); aspect-ratio: 3/4; max-width: 180px; }
+    .guide-mini-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+    .guide-mini-text .label { margin-bottom: 0.625rem; }
+    .guide-mini-name { font-family: var(--r-serif); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--ice); letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .guide-mini-text p { font-size: 0.9375rem; color: rgba(245,245,240,0.6); line-height: 1.78; margin-bottom: 0.875rem; }
+    .guide-mini-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; font-size: 0.8375rem; font-weight: 500; color: var(--teal); transition: opacity 0.2s ease; }
+    .guide-mini-link:hover { opacity: 0.75; }
+
+    /* ── Also Consider ───────────────────────────── */
+    .also-consider { background: var(--ice); padding: 4rem 0; }
+    .also-consider-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; background: #fff; border-radius: 1.25rem; padding: 2rem; box-shadow: 0 2px 12px rgba(13,27,42,0.06); }
+    .also-consider p { font-size: 0.9375rem; color: rgba(26,26,46,0.65); line-height: 1.6; max-width: 44ch; }
+    .also-consider strong { color: var(--navy); font-weight: 600; }
+
+    /* ── CTA ─────────────────────────────────────── */
+    .cta-section { background: var(--navy); padding: 6.5rem 0; position: relative; overflow: hidden; }
+    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 60%; height: 80%; background: radial-gradient(ellipse, rgba(78,205,196,0.08) 0%, transparent 65%); pointer-events: none; }
+    .cta-inner { position: relative; z-index: 2; text-align: center; }
+    .cta-inner .label { margin-bottom: 1rem; }
+    .cta-headline { color: var(--ice); margin-bottom: 1rem; }
+    .cta-rule { width: 3rem; height: 2px; background: var(--amber); margin: 1.25rem auto; border: none; }
+    .cta-sub { font-size: 1rem; color: rgba(245,245,240,0.6); line-height: 1.75; max-width: 42ch; margin: 0 auto 2.25rem; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    /* ── Footer ──────────────────────────────────── */
+    .footer { background: var(--navy-d); padding: 2.75rem 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .footer-brand { display: flex; align-items: center; gap: 0.625rem; }
+    .footer-brand img { height: 1.875rem; width: 1.875rem; object-fit: contain; opacity: 0.65; }
+    .footer-brand-name { font-family: var(--r-serif); font-size: 0.9375rem; font-weight: 600; color: rgba(245,245,240,0.6); letter-spacing: -0.01em; }
+    .footer-nav { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+    .footer-link { font-size: 0.8125rem; color: rgba(245,245,240,0.38); transition: color 0.2s ease; }
+    .footer-link:hover { color: rgba(245,245,240,0.7); }
+    .footer-link.active { color: rgba(245,245,240,0.6); }
+    .footer-copy { font-size: 0.75rem; color: rgba(245,245,240,0.28); }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════ NAV ══════════════════════ -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Kiita Tours — Home">
+        <img src={logo} alt="" aria-hidden="true" />
+        <span class="nav-brand-name">Kiita Tours</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/#tours"             class="nav-link active">Tours</a>
+        <a href="/#guide"             class="nav-link">About</a>
+        <a href="/#experience"        class="nav-link">Experience</a>
+        <a href="/safety-preparation" class="nav-link">Prepare</a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-teal"
+          style="font-size:0.8125rem;padding:0.625rem 1.25rem;"
+          onclick="gtag('event', 'book_click', {source: 'nav_cultural_tour'})"
+        >Book a Tour</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section class="page-hero grain" aria-label="Page header">
+    <div class="page-hero-media" aria-hidden="true">
+      <img src={heroImg} alt="" fetchpriority="high" />
+    </div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="wrap page-hero-content">
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Kiita Tours</a>
+        <span class="page-breadcrumb-sep" aria-hidden="true">›</span>
+        <a href="/#tours">Tours</a>
+        <span class="page-breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Utqiaġvik Cultural City Tour</span>
+      </nav>
+
+      <p class="label label-teal">Group Tour · Utqiaġvik (Barrow), Alaska</p>
+
+      <h1 class="display page-hero-title">
+        Utqiaġvik<br />Cultural City Tour<br />
+        <em>The Real Story<br />of Arctic Alaska.</em>
+      </h1>
+
+      <p class="page-hero-sub">
+        A guided cultural tour of Utqiaġvik (Barrow), Alaska, led by Robin Mongoyak — a lifelong
+        Iñupiat resident who grew up in this community and knows it from the inside.
+        The Whalebone Arch, the Iñupiat Heritage Center, and the living culture of the Far North.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-teal btn-cta-primary"
+          onclick="gtag('event', 'book_click', {source: 'hero_cultural_tour'})"
+        >
+          Book This Tour
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#locations" class="btn btn-ghost-light">See What's Included</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TOUR SNAPSHOT ══════════════════════ -->
+  <section class="tour-snapshot" aria-label="Tour at a glance">
+    <div class="wrap">
+      <div class="snapshot-grid" role="list">
+        <div class="snapshot-item" role="listitem">
+          <span class="snapshot-label">Duration</span>
+          <span class="snapshot-value">1.5 – 2 hrs</span>
+        </div>
+        <div class="snapshot-item" role="listitem">
+          <span class="snapshot-label">Price</span>
+          <span class="snapshot-value">$90</span>
+          <span class="snapshot-sub">per person · $120 min.</span>
+        </div>
+        <div class="snapshot-item" role="listitem">
+          <span class="snapshot-label">Group Size</span>
+          <span class="snapshot-value">Max 3</span>
+          <span class="snapshot-sub">guests</span>
+        </div>
+        <div class="snapshot-item" role="listitem">
+          <span class="snapshot-label">Language</span>
+          <span class="snapshot-value">English</span>
+        </div>
+        <div class="snapshot-item" role="listitem">
+          <span class="snapshot-label">Departure</span>
+          <span class="snapshot-value">Utqiaġvik</span>
+          <span class="snapshot-sub">pickup included</span>
+        </div>
+        <div class="snapshot-item" role="listitem">
+          <span class="snapshot-label">Season</span>
+          <span class="snapshot-value">Year-round</span>
+          <span class="snapshot-sub">weather permitting</span>
+        </div>
+      </div>
+      <div class="snapshot-actions">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-teal"
+          onclick="gtag('event', 'book_click', {source: 'snapshot_cultural_tour'})"
+        >
+          Reserve Your Spot
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <span class="price-note">Small groups fill quickly — book before you arrive in Barrow.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ BODY / EXPERIENCE ══════════════════════ -->
+  <section class="tour-body" id="experience" aria-labelledby="experience-heading">
+    <div class="wrap">
+      <div class="tour-body-grid">
+
+        <div class="tour-body-text">
+          <p class="label label-ink" style="margin-bottom: 0.75rem;">The Tour</p>
+          <h2 class="h2" id="experience-heading" style="color: var(--navy); margin-bottom: 1.5rem;">
+            A City at the Edge<br />of the World
+          </h2>
+
+          <p>Utqiaġvik — known for many years as Barrow, Alaska — is one of the most remote communities in the United States. You can't drive here. There's no road from anywhere in Alaska. You fly in, and when you land, you're somewhere that most people will never go. This tour is about understanding that place through the eyes of someone who grew up here.</p>
+
+          <p>The Utqiaġvik Cultural City Tour takes you to the landmarks and sites that define this community — not as a sightseeing loop, but as a guided conversation. Robin Mongoyak was born here. He learned the traditions of his people from his family. Before founding Kiita Tours, he served as curator of the Iñupiat Heritage Center, where he spent years working to preserve and share the cultural history of the North Slope. When he walks you through Utqiaġvik, every stop comes with a story that you will not find in a travel guide.</p>
+
+          <p>The tour covers locations including the Whalebone Arch — Utqiaġvik's most recognized cultural symbol — the Iñupiat Heritage Center museum, and community sites that reflect both the history and the present-day life of this place. Robin explains Iñupiat traditions, the history of Utqiaġvik's growth as a community, the role of subsistence hunting in daily life, and what it means to live in one of the coldest and most isolated places on Earth.</p>
+
+          <div class="tour-pull">
+            <p>"People come to Utqiaġvik and they see the buildings and the roads and they're surprised — they expected something else. But when I show them the Whalebone Arch, when I explain what that arch means and who put it there and why, that's when they start to understand this place. The culture is here, in the everyday things. You just need someone to point it out."</p>
+            <cite>— Robin Mongoyak, Iñupiat Guide &amp; Founder, Kiita Tours</cite>
+          </div>
+
+          <p>This is the right tour if this is your first time in Utqiaġvik, or if you want to understand the community as a whole before going further out to Point Barrow. It's also the tour families, researchers, journalists, and photographers most often request — because it gives you context that makes everything else you see here make more sense.</p>
+        </div>
+
+        <div class="tour-photo-wrap">
+          <div class="tour-photo-frame">
+            <img
+              src={heroImg}
+              alt="The Whalebone Arch at sunset in Utqiaġvik (Barrow), Alaska — an iconic stop on the Kiita Tours Cultural City Tour"
+            />
+          </div>
+          <div class="tour-photo-badge" aria-hidden="true">
+            <div class="tour-photo-badge-line1">Utqiaġvik</div>
+            <div class="tour-photo-badge-line2">Iñupiat Homeland<br/>71°N Latitude</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ LOCATIONS ══════════════════════ -->
+  <section class="locations grain" id="locations" aria-labelledby="locations-heading">
+    <div class="locations-glow" aria-hidden="true"></div>
+    <div class="wrap locations-inner">
+      <div class="locations-header">
+        <p class="label label-teal">What's Included</p>
+        <h2 class="h2" id="locations-heading">Where This Tour Takes You</h2>
+        <p>The cultural city tour covers Utqiaġvik's most significant sites with Robin's firsthand commentary at every stop. Here's what this tour includes.</p>
+      </div>
+
+      <div class="locations-grid">
+
+        <div class="location-card">
+          <div class="location-card-img">
+            <img
+              src={heroImg}
+              alt="The Whalebone Arch at sunset — Utqiaġvik's most iconic cultural landmark, created from bowhead whale bones"
+            />
+            <div class="location-card-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="location-card-body">
+            <div class="location-card-label">Cultural Landmark</div>
+            <div class="location-card-name">The Whalebone Arch</div>
+            <p class="location-card-desc">The most recognized symbol of Utqiaġvik, constructed from bowhead whale bones and placed on the Arctic coastline. Robin explains the cultural, spiritual, and subsistence significance of the bowhead whale to the Iñupiat people — and what this arch represents for the community.</p>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-img">
+            <img
+              src={ihlcImg}
+              alt="The Iñupiat Heritage Center museum building in Utqiaġvik, Alaska — a stop on the Kiita Tours cultural city tour"
+            />
+            <div class="location-card-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="location-card-body">
+            <div class="location-card-label">Museum &amp; Cultural Institution</div>
+            <div class="location-card-name">Iñupiat Heritage Center</div>
+            <p class="location-card-desc">Utqiaġvik's premier museum, dedicated to preserving and sharing the history, art, and traditions of the Iñupiat people. Robin once served as its curator — giving him an intimate knowledge of every exhibit on display. A visit with him is not a tour of the building. It's a conversation with someone who helped build what's inside it.</p>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-img">
+            <img
+              src={nalukataqImg}
+              alt="Aerial view of a Nalukataq gathering on the Arctic coastline of Utqiaġvik — an Iñupiat cultural celebration"
+            />
+            <div class="location-card-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="location-card-body">
+            <div class="location-card-label">Community &amp; Daily Life</div>
+            <div class="location-card-name">Local Cultural Sites</div>
+            <p class="location-card-desc">Beyond the landmarks, Robin shows you Utqiaġvik as it actually is — a living Arctic community. He explains how people here navigate daily life at 71°N: subsistence hunting and fishing, managing extreme seasons, raising families in one of the most remote places in America, and maintaining Iñupiaq traditions across generations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ GUIDE MINI ══════════════════════ -->
+  <section class="guide-mini" id="guide" aria-labelledby="guide-mini-heading">
+    <div class="wrap guide-mini-inner">
+      <div class="guide-mini-photo">
+        <img
+          src={robinImg}
+          alt="Robin Mongoyak, Iñupiat guide and founder of Kiita Tours, wearing a traditional fur parka in Utqiaġvik (Barrow), Alaska"
+        />
+      </div>
+      <div class="guide-mini-text">
+        <p class="label label-teal">Your Guide</p>
+        <h2 class="guide-mini-name" id="guide-mini-heading">Robin Mongoyak</h2>
+        <p>Robin Mongoyak is a lifelong resident of Utqiaġvik and a father of five who has spent decades working to share the culture and history of his community with the outside world. He grew up learning Iñupiaq traditions from his family — hunting, fishing, and living in the way his people have for thousands of years on the North Slope of Alaska.</p>
+        <p>Before founding Kiita Tours, Robin served as curator of the Iñupiat Heritage Center in Utqiaġvik. He brings that depth of cultural and historical knowledge to every tour he leads. The stories he tells on the Utqiaġvik Cultural City Tour are not from a script. They come from his own life and from the lives of the people he has known in this community.</p>
+        <a href="/#guide" class="guide-mini-link" aria-label="Learn more about Robin Mongoyak on the Kiita Tours homepage">
+          Learn more about Robin
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ ALSO CONSIDER ══════════════════════ -->
+  <section class="also-consider" aria-label="Related tours">
+    <div class="wrap">
+      <div class="also-consider-inner">
+        <div>
+          <p style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:rgba(26,26,46,0.4);margin-bottom:0.5rem;">Also from Kiita Tours</p>
+          <p><strong>Point Barrow Arctic Experience</strong> — Journey to the northernmost point in the United States. Where three seas converge. 2.5–3 hrs · $150/person.</p>
+        </div>
+        <a href="/tours/point-barrow-arctic-experience" class="btn btn-ghost-dark" style="white-space:nowrap;">
+          View Point Barrow Tour
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA ══════════════════════ -->
+  <section class="cta-section" id="book" aria-labelledby="cta-heading">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner">
+      <p class="label label-teal">Reserve Your Spot</p>
+      <h2 class="h2 cta-headline" id="cta-heading">Ready to Experience<br />Utqiaġvik?</h2>
+      <hr class="cta-rule" />
+      <p class="cta-sub">Tours fill quickly — especially when visitor groups come through. Reserve before you arrive in Barrow so Robin can confirm your date and prepare for conditions on the day.</p>
+      <div class="cta-actions">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-teal btn-cta-primary"
+          onclick="gtag('event', 'book_click', {source: 'cta_cultural_tour'})"
+        >
+          Book This Tour — $90/person
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="mailto:kiitatours@gmail.com?subject=Question%20about%20the%20Cultural%20City%20Tour" class="btn btn-ghost-light">
+          Email Robin a Question
+        </a>
+      </div>
+      <p style="margin-top: 1.75rem; font-size: 0.8125rem; color: rgba(245,245,240,0.3);">
+        Also available: <a href="/tours/point-barrow-arctic-experience" style="color: rgba(78,205,196,0.6);">Point Barrow Arctic Experience</a> · <a href="/safety-preparation" style="color: rgba(78,205,196,0.6);">Preparation Guide</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap footer-inner">
+      <a href="/" class="footer-brand" aria-label="Kiita Tours — Home">
+        <img src={logo} alt="" aria-hidden="true" />
+        <span class="footer-brand-name">Kiita Tours LLC</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#tours"             class="footer-link active">Tours</a>
+        <a href="/#guide"             class="footer-link">About</a>
+        <a href="/#experience"        class="footer-link">Experience</a>
+        <a href="/safety-preparation" class="footer-link">Prepare</a>
+        <a href="/#booking"           class="footer-link">Book</a>
+      </nav>
+      <p class="footer-copy">Utqiaġvik, Alaska &nbsp;·&nbsp; &copy; 2025 Kiita Tours LLC</p>
+    </div>
+  </footer>
+
+</body>
+</html>
