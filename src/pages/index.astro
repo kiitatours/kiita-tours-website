@@ -722,7 +722,10 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
       border-radius: 1rem;
       overflow: hidden;
       cursor: default;
+      display: block;
+      text-decoration: none;
     }
+    a.exp-item { cursor: pointer; }
     .exp-item:first-child {
       grid-column: span 2;
     }
@@ -1305,15 +1308,15 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
       font-weight: 600;
       letter-spacing: 0.06em;
       color: rgba(245, 245, 240, 0.9);
-      text-decoration: none;
       text-transform: uppercase;
+      pointer-events: none;
       transition: background 0.2s ease, border-color 0.2s ease;
     }
-    .webcam-badge:hover {
+    a.exp-item:hover .webcam-badge {
       background: rgba(78, 205, 196, 0.18);
       border-color: rgba(78, 205, 196, 0.6);
     }
-    .webcam-badge:focus-visible {
+    a.exp-item:focus-visible {
       outline: 2px solid var(--teal);
       outline-offset: 3px;
     }
@@ -1510,6 +1513,10 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
               <li>In winter: extreme cold-weather gear (temps can reach -40°F)</li>
               <li>Camera — the light here is unlike anywhere else</li>
             </ul>
+            <a href="/safety-preparation" style="display:inline-flex; align-items:center; gap:0.35rem; margin-top:0.875rem; font-family:var(--font-body); font-size:0.8125rem; font-weight:600; color:var(--teal); text-decoration:none; letter-spacing:0.01em;">
+              Full gear guide &amp; preparation tips
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
 
           <div class="practical-col">
@@ -1752,24 +1759,24 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
       </div>
       <div class="exp-grid">
 
-        <div class="exp-item">
+        <a
+          class="exp-item"
+          href="https://seaice.alaska.edu/wp-content/uploads/2024/04/Utq_seaicecam_current-scaled.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View live Arctic Ocean sea ice webcam at Utqiaġvik — opens in new tab"
+        >
           <img src={arcticImg} alt="Sea ice floes floating on the Arctic Ocean near Point Barrow, Utqiaġvik, Alaska" class="exp-img" />
           <div class="exp-overlay" aria-hidden="true"></div>
-          <a
-            href="https://seaice.alaska.edu/wp-content/uploads/2024/04/Utq_seaicecam_current-scaled.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="webcam-badge"
-            aria-label="View live Arctic Ocean webcam — sea ice camera at Utqiaġvik"
-          >
-            <span class="webcam-dot" aria-hidden="true"></span>
+          <div class="webcam-badge" aria-hidden="true">
+            <span class="webcam-dot"></span>
             Live Sea Ice Cam
-          </a>
+          </div>
           <div class="exp-caption">
             <div class="exp-caption-label">Point Barrow</div>
             <div class="exp-caption-title">The Arctic Ocean</div>
           </div>
-        </div>
+        </a>
 
         <div class="exp-item">
           <img src={whaleboneImg} alt="Historic Whalebone Arch silhouetted against a vivid Arctic sunset in Utqiaġvik, Alaska — a stop on the Kiita Tours cultural city tour" class="exp-img" />
@@ -1822,7 +1829,7 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
           <div class="exp-caption-label">Cultural Institution</div>
           <div class="exp-caption-title">Iñupiat Heritage Center</div>
           <p class="museum-desc">
-            The Iñupiat Heritage Center is Utqiaġvik's premier museum dedicated to preserving and celebrating the history, art, and traditions of the Iñupiat people. Its exhibits cover everything from traditional tools and clothing to the history of the North Slope — telling the story of a culture that has thrived in one of the harshest environments on Earth for thousands of years.
+            The Iñupiat Heritage Center is Utqiaġvik's premier museum dedicated to preserving and celebrating the history, art, and traditions of the Iñupiat people. Its exhibits cover everything from traditional tools and clothing to the history of the North Slope — telling the story of a culture that has thrived in one of the harshest environments on Earth for thousands of years. <strong>Note: the Heritage Center is open weekdays only.</strong>
           </p>
           <p class="museum-desc" style="margin-bottom: 1.25rem;">
             Robin Mongoyak once served as curator of the Heritage Center, giving him an intimate, firsthand knowledge of every artifact and exhibit on display. A visit with Robin isn't just a tour — it's a guided conversation with someone who helped shape what you're looking at.
