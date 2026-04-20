@@ -1037,6 +1037,23 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
       animation: aurora 60s linear infinite;
     }
 
+    /* ── Mobile: suppress aurora to avoid Android Chromium GPU glitches ── */
+    /* All five known-bad properties (filter+blur, mask-image, will-change,
+       background-attachment:fixed, mix-blend-mode) are inside .aurora-layer
+       and its ::after. On touch/coarse-pointer devices we hide them entirely
+       and replace with a simple static warm glow on hero-overlay-2. */
+    @media (pointer: coarse) {
+      .aurora-layer,
+      .aurora-layer::after {
+        display: none;
+      }
+      .hero-overlay-2 {
+        background:
+          radial-gradient(ellipse at 75% 38%, rgba(245,193,74,0.13) 0%, transparent 52%),
+          radial-gradient(ellipse at 55% 40%, rgba(78,205,196,0.05) 0%, transparent 55%);
+      }
+    }
+
     /* ── Practical info strip ────────────────────── */
     .practical-strip {
       margin-top: 2.5rem;
