@@ -8,7 +8,9 @@ const whaleboneImg = `${base}/whalebone-arch-sunset.jpg`;
 const barrowImg    = `${base}/point-barrow.jpg`;
 const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
 const ihlcImg      = `${base}/IHLC.webp`;
-const mapImg       = `${base}/alaska-point-barrow-map.png`;
+const mapImg         = `${base}/alaska-point-barrow-map.png`;
+const tourGroupImg   = `${base}/Point-Barrow-first-group.jpg`;
+const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -1202,6 +1204,94 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
       font-style: italic;
     }
 
+    /* ── On the Tour photo strip ─────────────────── */
+    .on-the-tour {
+      background: var(--navy);
+      padding: 5rem 0;
+    }
+    .on-the-tour-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .on-the-tour-header .label { margin-bottom: 0.625rem; }
+    .on-the-tour-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2.125rem);
+      color: var(--ice);
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+    .tour-photos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 599px) {
+      .tour-photos-grid { grid-template-columns: 1fr; }
+    }
+    .tour-photo-card {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .tour-photo-card img {
+      width: 100%;
+      height: 26rem;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    @media (max-width: 599px) {
+      .tour-photo-card img { height: 20rem; }
+    }
+    .tour-photo-card:hover img { transform: scale(1.03); }
+    .tour-photo-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,27,42,0.88) 0%, rgba(13,27,42,0.4) 40%, rgba(13,27,42,0.05) 70%, transparent 100%);
+      pointer-events: none;
+    }
+    .tour-photo-card-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.25rem 1.5rem;
+    }
+    .tour-photo-card-caption-label {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.3rem;
+    }
+    .tour-photo-card-caption-title {
+      font-family: var(--font-head);
+      font-size: 1.0625rem;
+      color: var(--ice);
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+    .tour-photo-card-caption-body {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: rgba(245,245,240,0.68);
+      line-height: 1.6;
+    }
+    .on-the-tour-intro {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: rgba(245,245,240,0.62);
+      line-height: 1.7;
+      text-align: center;
+      max-width: 52ch;
+      margin: 0.5rem auto 2.25rem;
+    }
+
     /* ── Reviews placeholder section ─────────────── */
     .reviews {
       background: var(--ice);
@@ -1722,6 +1812,48 @@ const mapImg       = `${base}/alaska-point-barrow-map.png`;
               Tour with Robin
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ ON THE TOUR ══════════════════════ -->
+  <section class="on-the-tour" aria-label="What guests experience on a Kiita Tours Arctic tour">
+    <div class="wrap">
+      <div class="on-the-tour-header">
+        <p class="label label-teal">The Experience</p>
+        <h2>What You'll Experience</h2>
+      </div>
+      <p class="on-the-tour-intro">Every tour is personal, guided, and shaped by real Arctic conditions. Here's what it's like to be out there.</p>
+      <div class="tour-photos-grid">
+
+        <div class="tour-photo-card">
+          <img
+            src={tourGroupImg}
+            alt="Guests being guided at Point Barrow — the northernmost point in the United States — on a Kiita Tours Arctic experience from Utqiaġvik, Alaska"
+            loading="lazy"
+          />
+          <div class="tour-photo-card-overlay" aria-hidden="true"></div>
+          <div class="tour-photo-card-caption">
+            <div class="tour-photo-card-caption-label">Point Barrow &nbsp;·&nbsp; 71.38°N</div>
+            <div class="tour-photo-card-caption-title">Standing at the northernmost point in the United States</div>
+            <div class="tour-photo-card-caption-body">Experience the Arctic Ocean up close, where sea ice meets the horizon at Point Barrow.</div>
+          </div>
+        </div>
+
+        <div class="tour-photo-card">
+          <img
+            src={tourBoneyardImg}
+            alt="Guests standing at the edge of the Arctic in Utqiaġvik, Alaska — a Kiita Tours Point Barrow Arctic experience"
+            loading="lazy"
+          />
+          <div class="tour-photo-card-overlay" aria-hidden="true"></div>
+          <div class="tour-photo-card-caption">
+            <div class="tour-photo-card-caption-label">Utqiaġvik &nbsp;·&nbsp; Arctic Alaska</div>
+            <div class="tour-photo-card-caption-title">Preparing to venture out onto the Arctic landscape</div>
+            <div class="tour-photo-card-caption-body">Begin your journey with a guided introduction before heading into one of the most remote environments in the world.</div>
           </div>
         </div>
 

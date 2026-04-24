@@ -4,7 +4,9 @@ const logo      = `${base}/Kiita-Tours-Logo.png`;
 const heroImg   = `${base}/point-barrow.jpg`;
 const arcticImg = `${base}/arctic-ocean-gravel-pits.JPG`;
 const robinImg  = `${base}/robin-8021.jpg`;
-const mapImg    = `${base}/alaska-point-barrow-map.png`;
+const mapImg          = `${base}/alaska-point-barrow-map.png`;
+const tourGroupImg    = `${base}/Point-Barrow-first-group.jpg`;
+const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -467,6 +469,68 @@ const mapImg    = `${base}/alaska-point-barrow-map.png`;
     }
     .highlight-desc { font-size: 0.8375rem; color: rgba(245,245,240,0.52); line-height: 1.65; }
 
+    /* ── Guest photo strip ───────────────────────── */
+    .guest-photos {
+      background: var(--navy);
+      padding: 4.5rem 0;
+    }
+    .guest-photos-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    @media (max-width: 680px) {
+      .guest-photos-grid { grid-template-columns: 1fr; }
+    }
+    .guest-photo-card {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .guest-photo-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 22rem;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    @media (max-width: 680px) {
+      .guest-photo-card img { min-height: 18rem; }
+    }
+    .guest-photo-card:hover img { transform: scale(1.03); }
+    .guest-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,27,42,0.78) 0%, rgba(13,27,42,0.08) 55%, transparent 100%);
+      pointer-events: none;
+    }
+    .guest-photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.25rem 1.375rem;
+    }
+    .guest-photo-label {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.3rem;
+    }
+    .guest-photo-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      color: var(--ice);
+      letter-spacing: -0.015em;
+      line-height: 1.35;
+    }
+
     /* ── Geography / Map ─────────────────────────── */
     .geo-section {
       background: var(--ice);
@@ -853,6 +917,45 @@ const mapImg    = `${base}/alaska-point-barrow-map.png`;
           <div>
             <div class="highlight-title">Seasonal Conditions Explained</div>
             <p class="highlight-desc">Robin tells you exactly what the environment is doing during your visit — sea ice conditions, wildlife patterns, weather history — the kind of context only a lifelong local can give.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ GUEST PHOTOS ══════════════════════ -->
+  <section class="guest-photos" aria-label="Real guest photos from a Point Barrow tour">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom: 2.25rem;">
+        <p class="label label-teal" style="margin-bottom: 0.5rem;">The Experience</p>
+        <h2 style="font-family: var(--font-head); font-size: clamp(1.375rem, 2.5vw, 1.875rem); color: var(--ice); letter-spacing: -0.03em; margin: 0;">What You'll Experience</h2>
+      </div>
+      <div class="guest-photos-grid">
+
+        <div class="guest-photo-card">
+          <img
+            src={tourGroupImg}
+            alt="Robin Mongoyak guiding three guests at Point Barrow, the northernmost point in the United States — Utqiaġvik, Alaska"
+            loading="lazy"
+          />
+          <div class="guest-photo-overlay" aria-hidden="true"></div>
+          <div class="guest-photo-caption">
+            <div class="guest-photo-label">Point Barrow &nbsp;·&nbsp; 71.38°N</div>
+            <div class="guest-photo-title">Standing at the northernmost point in the United States</div>
+          </div>
+        </div>
+
+        <div class="guest-photo-card">
+          <img
+            src={tourBoneyardImg}
+            alt="Guests gearing up beside a snowmobile in Utqiaġvik, Alaska — ready to depart on a Kiita Tours Point Barrow Arctic experience"
+            loading="lazy"
+          />
+          <div class="guest-photo-overlay" aria-hidden="true"></div>
+          <div class="guest-photo-caption">
+            <div class="guest-photo-label">Utqiaġvik &nbsp;·&nbsp; Arctic Alaska</div>
+            <div class="guest-photo-title">Preparing to venture out onto the Arctic landscape</div>
           </div>
         </div>
 
