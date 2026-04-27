@@ -594,12 +594,23 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
       color: rgba(26,26,46,0.45);
       margin-top: 0.2rem;
     }
+    .tour-avail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: rgba(26,26,46,0.55);
+      line-height: 1.55;
+      margin-bottom: 1.125rem;
+    }
+    .tour-avail svg { flex-shrink: 0; margin-top: 0.1rem; }
     .tour-desc {
       font-size: 0.875rem;
       color: rgba(26,26,46,0.68);
       line-height: 1.68;
       flex-grow: 1;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.875rem;
     }
     .tour-footer {
       margin-top: auto;
@@ -1650,7 +1661,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
       <div class="tours-header">
         <p class="label label-teal">Choose Your Experience</p>
         <h2 class="h2" id="tours-heading">Arctic Tours</h2>
-        <p>All tours depart from Utqiaġvik and are conducted in English. Max 3 guests. Available year-round, subject to weather.</p>
+        <p>All tours depart from Utqiaġvik and are conducted in English. Max 3 guests. Departure windows vary by tour — see each tour for specific availability.</p>
         <p style="margin-top: 0.75rem; font-size: 0.8375rem; color: rgba(245,245,240,0.45);">
           <span style="color: var(--amber); font-weight: 600;">Small groups fill quickly.</span>
           &nbsp;Reserve before you arrive in Utqiaġvik — tours cannot always be accommodated same-day.
@@ -1674,6 +1685,10 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
             </div>
           </div>
           <p class="tour-desc">Visit key locations including the Whalebone Arch and local viewpoints while learning about Iñupiat culture, daily life, and the history of Utqiaġvik.</p>
+          <p class="tour-avail">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+            Daily 9:00 AM – 7:00 PM · Museum stops weekdays only
+          </p>
           <div class="tour-footer">
             <a href="/tours/utqiagvik-cultural-city-tour" class="btn btn-dark-sm">View Tour Details</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="tour-book-link">Book Now →</a>
@@ -1696,6 +1711,10 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
             </div>
           </div>
           <p class="tour-desc">Journey to the northernmost point in the United States while learning about Arctic geography, traditional subsistence life, wildlife, and environmental conditions.</p>
+          <p class="tour-avail">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+            Weekdays 5:00 – 7:00 PM · Weekends 9:00 AM – 7:00 PM
+          </p>
           <div class="tour-footer">
             <a href="/tours/point-barrow-arctic-experience" class="btn btn-dark-sm">View Tour Details</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="tour-book-link">Book Now →</a>
@@ -1719,6 +1738,10 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
           </div>
           <p class="tour-desc">A fully customizable private experience tailored to your interests — culture, history, photography, or Arctic life. Ideal for families, researchers, and photographers.</p>
           <p class="private-note">You set the agenda. Robin guides the experience. No fixed itinerary — this tour is entirely yours.</p>
+          <p class="tour-avail">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+            Daily 9:00 AM – 7:00 PM · Museum stops weekdays only
+          </p>
           <div class="tour-footer">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-dark-sm">Book This Tour</a>
           </div>
@@ -1741,6 +1764,10 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
           </div>
           <p class="tour-desc">A fully customizable private journey to the northernmost point in the United States, tailored entirely to your interests and pace.</p>
           <p class="private-note">Stand where the Arctic Ocean, Beaufort Sea, and Chukchi Sea meet — on your own schedule, with your own private guide.</p>
+          <p class="tour-avail">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+            Weekdays 5:00 – 7:00 PM · Weekends 9:00 AM – 7:00 PM
+          </p>
           <div class="tour-footer">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-dark-sm">Book This Tour</a>
           </div>

@@ -94,7 +94,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
       "price": "150",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "description": "$150 per person. Year-round, weather permitting. Maximum 3 guests."
+      "description": "$150 per person. Maximum 3 guests. Weekday departures 5:00 PM–7:00 PM; weekend departures 9:00 AM–7:00 PM. Weather and conditions dependent."
     }
   }
   </script>
@@ -347,6 +347,21 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
       font-size: 0.8125rem;
       color: rgba(26,26,46,0.5);
     }
+    .avail-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      margin-top: 1.5rem;
+      background: rgba(13,27,42,0.04);
+      border-left: 3px solid var(--teal);
+      border-radius: 0.5rem;
+      padding: 0.875rem 1.125rem;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: rgba(26,26,46,0.7);
+      line-height: 1.65;
+    }
+    .avail-notice strong { color: var(--navy); }
 
     /* ── Tour Body ───────────────────────────────── */
     .tour-body {
@@ -786,9 +801,9 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
           <span class="snapshot-sub">pickup included</span>
         </div>
         <div class="snapshot-item" role="listitem">
-          <span class="snapshot-label">Season</span>
-          <span class="snapshot-value">Year-round</span>
-          <span class="snapshot-sub">weather permitting</span>
+          <span class="snapshot-label">Availability</span>
+          <span class="snapshot-value" style="font-size: 0.9rem;">Weekdays 5–7 PM</span>
+          <span class="snapshot-sub">Weekends 9 AM–7 PM</span>
         </div>
       </div>
       <div class="snapshot-actions">
@@ -802,6 +817,10 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
         <span class="price-note">Small groups fill quickly — reserve before arriving in Utqiaġvik.</span>
+      </div>
+      <div class="avail-notice" role="note" aria-label="Tour availability">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink:0; margin-top:0.1rem;"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+        <span><strong>Departure windows:</strong> Weekday departures are available from 5:00 PM – 7:00 PM. Weekend departures are available from 9:00 AM – 7:00 PM. All Point Barrow tours are weather- and condition-dependent. Bookings are requests and confirmed by Robin after review.</span>
       </div>
     </div>
   </section>
