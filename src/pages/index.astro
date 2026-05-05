@@ -9,8 +9,9 @@ const barrowImg    = `${base}/point-barrow.jpg`;
 const nalukataqImg = `${base}/nalukataq-ariel.JPG`;
 const ihlcImg      = `${base}/IHLC.webp`;
 const mapImg         = `${base}/alaska-point-barrow-map.png`;
-const tourGroupImg   = `${base}/Point-Barrow-first-group.jpg`;
+const tourGroupImg    = `${base}/Point-Barrow-first-group.jpg`;
 const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
+const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -1316,6 +1317,46 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
       max-width: 52ch;
       margin: 0.5rem auto 2.25rem;
     }
+    .tour-video-card {
+      margin-top: 1rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .tour-video-card video {
+      width: 100%;
+      display: block;
+      max-height: 26rem;
+      object-fit: contain;
+      background: #000;
+    }
+    .tour-video-card-caption {
+      padding: 1.125rem 1.5rem 1.25rem;
+    }
+    .tour-video-card-caption-label {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.3rem;
+    }
+    .tour-video-card-caption-title {
+      font-family: var(--font-head);
+      font-size: 1.0625rem;
+      color: var(--ice);
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      margin-bottom: 0.375rem;
+    }
+    .tour-video-card-caption-body {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: rgba(245,245,240,0.6);
+      line-height: 1.6;
+    }
 
     /* ── Reviews placeholder section ─────────────── */
     .reviews {
@@ -1901,6 +1942,24 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
         </div>
 
       </div>
+
+      <div class="tour-video-card">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="King Eider ducks in flight over Point Barrow, Alaska"
+        >
+          <source src={ducksVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="tour-video-card-caption">
+          <div class="tour-video-card-caption-label">Point Barrow &nbsp;·&nbsp; Arctic Wildlife</div>
+          <div class="tour-video-card-caption-title">Arctic Wildlife in Motion</div>
+          <div class="tour-video-card-caption-body">The first flocks of King Eider ducks arriving at Point Barrow on their migration north. Filmed May 3, 2026.</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
