@@ -7,6 +7,7 @@ const robinImg  = `${base}/robin-8021.jpg`;
 const mapImg          = `${base}/alaska-point-barrow-map.png`;
 const tourGroupImg    = `${base}/Point-Barrow-first-group.jpg`;
 const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
+const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
   <link rel="apple-touch-icon"                  href={`${base}/Kiita-Tours-Logo.png`} />
 
   <title>Point Barrow Arctic Experience | Guided Tour from Utqiaġvik (Barrow), Alaska — Kiita Tours</title>
-  <meta name="description" content="Stand at the northernmost point in the United States on a guided Point Barrow tour from Utqiaġvik (Barrow), Alaska. Led by Robin Mongoyak, a lifelong Iñupiat guide born and raised in the Arctic. 2.5–3 hours · $150/person · Max 3 guests." />
+  <meta name="description" content="Stand at the northernmost point in the United States on a guided Point Barrow tour from Utqiaġvik (Barrow), Alaska. Led by Robin Mongoyak, a lifelong Iñupiat guide born and raised in the Arctic. 2.5–3 hours · $175/person · Max 3 guests." />
   <link rel="canonical" href="https://kiitatours.com/tours/point-barrow-arctic-experience" />
 
   <!-- Open Graph -->
@@ -43,7 +44,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Point Barrow Arctic Experience | Kiita Tours — Utqiaġvik, Alaska" />
-  <meta name="twitter:description" content="Guided tour to the northernmost point in the US. Led by Robin Mongoyak, Iñupiat guide from Utqiaġvik. $150/person, max 3 guests." />
+  <meta name="twitter:description" content="Guided tour to the northernmost point in the US. Led by Robin Mongoyak, Iñupiat guide from Utqiaġvik. $175/person, max 3 guests." />
   <meta name="twitter:image"       content="https://kiitatours.com/point-barrow.jpg" />
 
   <!-- JSON-LD: TouristTrip -->
@@ -91,10 +92,10 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
     },
     "offers": {
       "@type": "Offer",
-      "price": "150",
+      "price": "175",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "description": "$150 per person. Maximum 3 guests. Weekday departures 5:00 PM–7:00 PM; weekend departures 9:00 AM–7:00 PM. Weather and conditions dependent."
+      "description": "$175 per person. Maximum 3 guests. Mid-June through mid-October: daily 9:00 AM–7:00 PM. Other months: weekday departures 5:00 PM–7:00 PM, weekend departures 9:00 AM–7:00 PM. Weather and conditions dependent."
     }
   }
   </script>
@@ -484,6 +485,45 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
     }
     .highlight-desc { font-size: 0.8375rem; color: rgba(245,245,240,0.52); line-height: 1.65; }
 
+    /* ── Wildlife video panel ────────────────────── */
+    .wildlife-video { background: var(--ink); padding: 4.5rem 0; }
+    .wildlife-video-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; }
+    @media (max-width: 760px) {
+      .wildlife-video-inner { grid-template-columns: 1fr; }
+    }
+    .wildlife-video-text .label { margin-bottom: 0.625rem; }
+    .wildlife-video-text h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+      color: var(--ice);
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .wildlife-video-text p {
+      font-size: 0.9375rem;
+      color: rgba(245,245,240,0.6);
+      line-height: 1.78;
+      margin-bottom: 0.875rem;
+    }
+    .wildlife-video-wrap {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.45);
+    }
+    .wildlife-video-wrap video {
+      width: 100%;
+      display: block;
+      border-radius: 1rem;
+    }
+    .wildlife-video-caption {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: rgba(245,245,240,0.42);
+      font-style: italic;
+      text-align: center;
+    }
+
     /* ── Guest photo strip ───────────────────────── */
     .guest-photos {
       background: var(--navy);
@@ -783,7 +823,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
         </div>
         <div class="snapshot-item" role="listitem">
           <span class="snapshot-label">Price</span>
-          <span class="snapshot-value">$150</span>
+          <span class="snapshot-value">$175</span>
           <span class="snapshot-sub">per person</span>
         </div>
         <div class="snapshot-item" role="listitem">
@@ -802,8 +842,8 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
         </div>
         <div class="snapshot-item" role="listitem">
           <span class="snapshot-label">Availability</span>
-          <span class="snapshot-value" style="font-size: 0.9rem;">Weekdays 5–7 PM</span>
-          <span class="snapshot-sub">Weekends 9 AM–7 PM</span>
+          <span class="snapshot-value" style="font-size: 0.82rem;">Daily 9 AM–7 PM*</span>
+          <span class="snapshot-sub">*mid-Jun–mid-Oct; other months vary</span>
         </div>
       </div>
       <div class="snapshot-actions">
@@ -820,7 +860,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
       </div>
       <div class="avail-notice" role="note" aria-label="Tour availability">
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink:0; margin-top:0.1rem;"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
-        <span><strong>Departure windows:</strong> Weekday departures are available from 5:00 PM – 7:00 PM. Weekend departures are available from 9:00 AM – 7:00 PM. All Point Barrow tours are weather- and condition-dependent. Bookings are requests and confirmed by Robin after review.</span>
+        <span><strong>Departure windows:</strong> From mid-June through mid-October, Point Barrow tours are available daily from 9:00 AM – 7:00 PM. Outside of that season, weekday departures are available from 5:00 PM – 7:00 PM, and weekend departures are available from 9:00 AM – 7:00 PM. All Point Barrow tours are weather- and condition-dependent. Bookings are requests and confirmed by Robin after review.</span>
       </div>
     </div>
   </section>
@@ -939,6 +979,32 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ WILDLIFE VIDEO ══════════════════════ -->
+  <section class="wildlife-video" aria-label="Wildlife video from Point Barrow">
+    <div class="wrap wildlife-video-inner">
+      <div class="wildlife-video-text">
+        <p class="label label-teal">Point Barrow Wildlife</p>
+        <h2>Arctic Life in Motion</h2>
+        <p>Point Barrow sits along one of North America's most active migratory corridors. King Eider ducks, shorebirds, Arctic foxes, and — in spring — bowhead whales moving through the ice leads are all part of the landscape here.</p>
+        <p>This video was filmed at Point Barrow during a tour. What you'll see depends on the season, but the wildlife is never far.</p>
+      </div>
+      <div>
+        <div class="wildlife-video-wrap">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            aria-label="King Eider ducks flying over Point Barrow, Alaska"
+          >
+            <source src={ducksVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="wildlife-video-caption">King Eider ducks in flight over Point Barrow — filmed on tour</p>
       </div>
     </div>
   </section>
@@ -1063,7 +1129,7 @@ const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
           class="btn btn-teal btn-cta-primary"
           onclick="gtag('event', 'book_click', {source: 'cta_point_barrow'})"
         >
-          Book This Tour — $150/person
+          Book This Tour — $175/person
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
         <a href="mailto:kiitatours@gmail.com?subject=Question%20about%20the%20Point%20Barrow%20Tour" class="btn btn-ghost-light">
