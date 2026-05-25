@@ -5,9 +5,12 @@ const heroImg   = `${base}/point-barrow.jpg`;
 const arcticImg = `${base}/arctic-ocean-gravel-pits.JPG`;
 const robinImg  = `${base}/robin-8021.jpg`;
 const mapImg          = `${base}/alaska-point-barrow-map.png`;
-const tourGroupImg    = `${base}/Point-Barrow-first-group.jpg`;
-const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
-const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
+const tourGroupImg       = `${base}/Point-Barrow-first-group.jpg`;
+const tourBoneyardImg    = `${base}/Point-Barrow-guide-boneyard.jpg`;
+const ducksVideo         = `${base}/ducks-point-barrow.mp4`;
+const winterSnowmachine  = `${base}/2-snowmachine-passengers-point-barrow.jpg`;
+const winterSled         = `${base}/2-passengers-sled-point-barrow.jpeg`;
+const winterSledClose    = `${base}/2-passengers-sled-close-up-point-barrow.jpeg`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -485,6 +488,141 @@ const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
     }
     .highlight-desc { font-size: 0.8375rem; color: rgba(245,245,240,0.52); line-height: 1.65; }
 
+    /* ── Winter snowmachine section ─────────────── */
+    .winter-ops { background: var(--ink); padding: 5rem 0; }
+    .winter-ops-header { text-align: center; margin-bottom: 2.5rem; }
+    .winter-ops-header .label { margin-bottom: 0.625rem; }
+    .winter-ops-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2.125rem);
+      color: var(--ice);
+      letter-spacing: -0.03em;
+      margin: 0 0 0.75rem;
+    }
+    .winter-ops-header p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: rgba(245,245,240,0.62);
+      line-height: 1.7;
+      max-width: 58ch;
+      margin: 0 auto;
+    }
+    .winter-photos-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 0.875rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 800px) {
+      .winter-photos-grid { grid-template-columns: 1fr 1fr; }
+      .winter-photo-card:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 520px) {
+      .winter-photos-grid { grid-template-columns: 1fr; }
+      .winter-photo-card:first-child { grid-column: auto; }
+    }
+    .winter-photo-card {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .winter-photo-card img {
+      width: 100%;
+      height: 22rem;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .winter-photo-card:hover img { transform: scale(1.04); }
+    .winter-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,27,42,0.88) 0%, rgba(13,27,42,0.3) 50%, transparent 80%);
+      pointer-events: none;
+    }
+    .winter-photo-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1rem 1.25rem;
+    }
+    .winter-photo-label {
+      font-size: 0.6375rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.275rem;
+    }
+    .winter-photo-title {
+      font-family: var(--font-head);
+      font-size: 0.875rem;
+      color: var(--ice);
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+    .winter-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 720px) {
+      .winter-detail-grid { grid-template-columns: 1fr; }
+    }
+    .winter-detail-text p {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: rgba(245,245,240,0.65);
+      line-height: 1.78;
+      margin-bottom: 1rem;
+    }
+    .winter-detail-text p:last-child { margin-bottom: 0; }
+    .winter-gear-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1rem;
+      padding: 1.75rem;
+    }
+    .winter-gear-title {
+      font-family: var(--font-head);
+      font-size: 1.0625rem;
+      color: var(--ice);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .winter-gear-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    .winter-gear-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: rgba(245,245,240,0.72);
+      line-height: 1.55;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .winter-gear-list li:last-child { border-bottom: none; }
+    .winter-gear-list li svg { flex-shrink: 0; color: var(--teal); margin-top: 0.15rem; }
+    .winter-safety-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      background: rgba(244,162,97,0.08);
+      border-left: 3px solid var(--amber);
+      border-radius: 0.5rem;
+      padding: 0.875rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.8375rem;
+      color: rgba(245,245,240,0.62);
+      line-height: 1.65;
+    }
+    .winter-safety-note svg { flex-shrink: 0; color: var(--amber); margin-top: 0.15rem; }
+
     /* ── Wildlife video panel ────────────────────── */
     .wildlife-video { background: var(--ink); padding: 4.5rem 0; }
     .wildlife-video-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; }
@@ -900,6 +1038,109 @@ const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
           <div class="tour-photo-badge" aria-hidden="true">
             <div class="tour-photo-badge-line1">71.38° N</div>
             <div class="tour-photo-badge-line2">Northernmost Point<br/>United States</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ WINTER OPERATIONS ══════════════════════ -->
+  <section class="winter-ops" id="winter" aria-labelledby="winter-heading">
+    <div class="wrap">
+
+      <div class="winter-ops-header">
+        <p class="label label-teal">Winter Access</p>
+        <h2 id="winter-heading">Winter Point Barrow Tours<br/>by Snowmachine</h2>
+        <p>There is no road to Point Barrow. In winter, the only way out is by snowmachine. Here's exactly what that looks like — and what you need to be prepared.</p>
+      </div>
+
+      <div class="winter-photos-grid">
+
+        <div class="winter-photo-card">
+          <img
+            src={winterSnowmachine}
+            alt="Two guests riding as passengers on snowmachines during a winter Point Barrow tour with Kiita Tours"
+            loading="lazy"
+          />
+          <div class="winter-photo-overlay" aria-hidden="true"></div>
+          <div class="winter-photo-caption">
+            <div class="winter-photo-label">Winter Transport</div>
+            <div class="winter-photo-title">Guests riding as passengers on snowmachines during a winter Point Barrow tour.</div>
+          </div>
+        </div>
+
+        <div class="winter-photo-card">
+          <img
+            src={winterSled}
+            alt="Two guests riding in a ski sled pulled by a snowmachine on the winter route to Point Barrow"
+            loading="lazy"
+          />
+          <div class="winter-photo-overlay" aria-hidden="true"></div>
+          <div class="winter-photo-caption">
+            <div class="winter-photo-label">Passenger Sled</div>
+            <div class="winter-photo-title">Guests riding in a ski sled pulled by a snowmachine on the winter route to Point Barrow.</div>
+          </div>
+        </div>
+
+        <div class="winter-photo-card">
+          <img
+            src={winterSledClose}
+            alt="Close-up of the passenger sled fitted with caribou hides for warmth during a winter Point Barrow tour"
+            loading="lazy"
+          />
+          <div class="winter-photo-overlay" aria-hidden="true"></div>
+          <div class="winter-photo-caption">
+            <div class="winter-photo-label">Caribou Hide Sled</div>
+            <div class="winter-photo-title">The passenger sled is fitted with caribou hides for added warmth and comfort in Arctic conditions.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="winter-detail-grid">
+
+        <div class="winter-detail-text">
+          <p>In winter conditions, Point Barrow is reached by snowmachine. There is no road and no alternative route. Depending on the number of guests and conditions on the day, Robin will have guests ride as passengers on snowmachines directly, or in a sled with skis pulled behind a snowmachine. The sled is fitted with caribou hides — an Iñupiat tradition that adds real warmth against the cold.</p>
+          <p>This is an exposed Arctic route. Wind comes off the water with nothing to break it, and temperatures with windchill can be severe. The route itself is part of the experience — the same path Iñupiat hunters have traveled for generations — but it requires guests to arrive dressed and prepared for real winter conditions.</p>
+          <p>Guests who are not appropriately dressed may not be able to safely participate. Robin will assess conditions on the day. Safety and guide discretion come first. If you have any questions about what to wear, reach out before your tour — he would rather help you prepare than turn anyone away.</p>
+        </div>
+
+        <div class="winter-gear-card">
+          <div class="winter-gear-title">Required Winter Gear</div>
+          <ul class="winter-gear-list" aria-label="Required winter clothing for Point Barrow snowmachine tours">
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Insulated parka rated for extreme cold
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Insulated snow pants or bibs
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Winter boots rated for -25°F or colder
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Warm hat that covers the ears
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Insulated gloves or mittens (liner gloves recommended)
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Face protection — balaclava or neck gaiter
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Layered base and mid-layer clothing underneath
+            </li>
+          </ul>
+          <div class="winter-safety-note" role="note">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+            <span>Kiita Tours may adjust, reschedule, or cancel winter tours if weather, trail, or gear conditions are unsafe. Gear questions? <a href="mailto:kiitatours@gmail.com" style="color: rgba(245,245,240,0.75); text-decoration: underline;">Email Robin before you book.</a></span>
           </div>
         </div>
 

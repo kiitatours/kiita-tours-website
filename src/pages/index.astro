@@ -12,6 +12,9 @@ const mapImg         = `${base}/alaska-point-barrow-map.png`;
 const tourGroupImg    = `${base}/Point-Barrow-first-group.jpg`;
 const tourBoneyardImg = `${base}/Point-Barrow-guide-boneyard.jpg`;
 const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
+const winterSnowmachine = `${base}/2-snowmachine-passengers-point-barrow.jpg`;
+const winterSled        = `${base}/2-passengers-sled-point-barrow.jpeg`;
+const winterSledClose   = `${base}/2-passengers-sled-close-up-point-barrow.jpeg`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -598,6 +601,22 @@ const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
       margin-bottom: 1.125rem;
     }
     .tour-avail svg { flex-shrink: 0; margin-top: 0.1rem; }
+    .winter-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      background: rgba(13,27,42,0.045);
+      border-left: 3px solid var(--teal);
+      border-radius: 0.5rem;
+      padding: 0.75rem 0.875rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: rgba(26,26,46,0.65);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .winter-note svg { flex-shrink: 0; color: var(--teal); margin-top: 0.1rem; }
+    .winter-note strong { color: rgba(26,26,46,0.82); }
     .tour-desc {
       font-size: 0.875rem;
       color: rgba(26,26,46,0.68);
@@ -1750,6 +1769,10 @@ const ducksVideo      = `${base}/ducks-point-barrow.mp4`;
             <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
             Mid-Jun – mid-Oct: daily 9 AM–7 PM · Other months: weekdays 5–7 PM, weekends 9 AM–7 PM
           </p>
+          <div class="winter-note" role="note">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m14.95 6.36-.7-.7M6.41 6.41l-.7-.7m12.02 0-.7.7M6.41 17.59l-.7.7"/><circle cx="12" cy="12" r="4"/></svg>
+            <span><strong>Winter tours by snowmachine.</strong> In winter conditions, Point Barrow is accessed by snowmachine. Guests ride as passengers on snowmachines or in a sled pulled by a snowmachine, depending on conditions. <strong>Proper Arctic winter clothing is required.</strong> <a href="/tours/point-barrow-arctic-experience#winter" style="color: var(--teal); text-decoration: none; font-weight: 600;">See winter details →</a></span>
+          </div>
           <div class="tour-footer">
             <a href="/tours/point-barrow-arctic-experience" class="btn btn-dark-sm">View Tour Details</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfawe488EpOrNJvKYm32IzR_UjjyO5BpFTBiQbeg3J3qJ9t8g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="tour-book-link">Book Now →</a>
