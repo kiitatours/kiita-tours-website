@@ -1,6 +1,7 @@
 node_modules
 dist
 .claude
-temporary screenshots
+.astro/
+temporary-screenshots/
 .env
 .DS_Store

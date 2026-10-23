@@ -1,0 +1,35 @@
+version: 2
+
+updates:
+  # Website dependencies (astro, @astrojs/sitemap, puppeteer, and their
+  # transitive packages in package-lock.json).
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    groups:
+      npm-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    # Major version updates (e.g. astro's last 6 -> 7 bump) are intentionally
+    # left out of the group above so each one opens its own PR and gets
+    # reviewed on its own, since those are the updates most likely to need
+    # a build/screenshot check before merging.
+
+  # Actions used in .github/workflows/deploy.yml. These are pinned to full
+  # commit SHAs with a trailing "# vX.Y.Z" comment; Dependabot understands
+  # that format and will update both the SHA and the comment together.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    groups:
+      github-actions-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
